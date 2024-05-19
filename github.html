@@ -3,51 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Repo Information</title>
+    <title>GitHub Repository Search</title>
     <style>
-        #repo-info {
+        body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        #search-form {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        #repo-info {
+            background-color: white;
             padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 400px;
+            text-align: left;
         }
     </style>
 </head>
 <body>
-    <div id="repo-info">
-        <h2>GitHub Repository Information</h2>
-        <div id="loading">Loading...</div>
+    <div id="search-form">
+        <input type="text" id="owner" placeholder="Repository Owner">
+        <input type="text" id="repo" placeholder="Repository Name">
+        <button onclick="searchRepo()">Search</button>
     </div>
+    <div id="repo-info"></div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('https://api.github.com/repos/linuxfandudeguy/laki')
-                .then(response => response.json())
-                .then(data => {
-                    const repoInfoDiv = document.getElementById('repo-info');
-                    const loadingDiv = document.getElementById('loading');
-                    loadingDiv.style.display = 'none';
+        async function searchRepo() {
+            const owner = document.getElementById('owner').value;
+            const repo = document.getElementById('repo').value;
+            const url = `https://api.github.com/repos/${owner}/${repo}`;
 
-                    const repoName = document.createElement('p');
-                    repoName.textContent = `Repository Name: ${data.full_name}`;
-                    repoInfoDiv.appendChild(repoName);
+            try {
+                const response = await fetch(url);
+                if (response.ok) {
+                    const repoInfo = await response.json();
+                    displayRepoInfo(repoInfo);
+                } else {
+                    displayError(`Repository not found or an error occurred: ${response.statusText}`);
+                }
+            } catch (error) {
+                displayError(`An error occurred: ${error.message}`);
+            }
+        }
 
-                    const repoDescription = document.createElement('p');
-                    repoDescription.textContent = `Description: ${data.description}`;
-                    repoInfoDiv.appendChild(repoDescription);
+        function displayRepoInfo(repoInfo) {
+            const repoInfoDiv = document.getElementById('repo-info');
+            repoInfoDiv.innerHTML = `
+                <h2>${repoInfo.name}</h2>
+                <p>Description: ${repoInfo.description || 'N/A'}</p>
+                <p>Owner: ${repoInfo.owner.login}</p>
+                <p>Stars: ${repoInfo.stargazers_count}</p>
+                <p>Forks: ${repoInfo.forks_count}</p>
+                <p>Open Issues: ${repoInfo.open_issues_count}</p>
+                <p>Language: ${repoInfo.language || 'N/A'}</p>
+                <p>Created at: ${new Date(repoInfo.created_at).toLocaleDateString()}</p>
+                <p>Last updated: ${new Date(repoInfo.updated_at).toLocaleDateString()}</p>
+                <p>URL: <a href="${repoInfo.html_url}" target="_blank">${repoInfo.html_url}</a></p>
+            `;
+        }
 
-                    const repoStars = document.createElement('p');
-                    repoStars.textContent = `Stars: ${data.stargazers_count}`;
-                    repoInfoDiv.appendChild(repoStars);
-
-                    const repoForks = document.createElement('p');
-                    repoForks.textContent = `Forks: ${data.forks_count}`;
-                    repoInfoDiv.appendChild(repoForks);
-                })
-                .catch(error => {
-                    console.error('Error fetching data:', error);
-                    const loadingDiv = document.getElementById('loading');
-                    loadingDiv.textContent = 'Error fetching data. Please try again later.';
-                });
-        });
+        function displayError(message) {
+            const repoInfoDiv = document.getElementById('repo-info');
+            repoInfoDiv.innerHTML = `<p style="color: red;">${message}</p>`;
+        }
     </script>
 </body>
 </html>
