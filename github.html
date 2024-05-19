@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repo Information</title>
+    <style>
+        #repo-info {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="repo-info">
+        <h2>GitHub Repository Information</h2>
+        <div id="loading">Loading...</div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('https://api.github.com/repos/linuxfandudeguy/laki')
+                .then(response => response.json())
+                .then(data => {
+                    const repoInfoDiv = document.getElementById('repo-info');
+                    const loadingDiv = document.getElementById('loading');
+                    loadingDiv.style.display = 'none';
+
+                    const repoName = document.createElement('p');
+                    repoName.textContent = `Repository Name: ${data.full_name}`;
+                    repoInfoDiv.appendChild(repoName);
+
+                    const repoDescription = document.createElement('p');
+                    repoDescription.textContent = `Description: ${data.description}`;
+                    repoInfoDiv.appendChild(repoDescription);
+
+                    const repoStars = document.createElement('p');
+                    repoStars.textContent = `Stars: ${data.stargazers_count}`;
+                    repoInfoDiv.appendChild(repoStars);
+
+                    const repoForks = document.createElement('p');
+                    repoForks.textContent = `Forks: ${data.forks_count}`;
+                    repoInfoDiv.appendChild(repoForks);
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    const loadingDiv = document.getElementById('loading');
+                    loadingDiv.textContent = 'Error fetching data. Please try again later.';
+                });
+        });
+    </script>
+</body>
+</html>
