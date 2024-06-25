@@ -1,0 +1,208 @@
+<html><head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/github.min.css"><style>body { font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; }</style></head><body><article class="markdown-body"><h1 id="basics-of-markdown">Basics of Markdown</h1>
+<details>
+<summary>Chapter 1: Introduction</summary>
+
+<h1 id="introduction-to-markdown">Introduction to Markdown</h1>
+<p>Markdown is a lightweight markup language created in 2004 by John Gruber with help from Aaron Swartz. It is designed to be easy to read and write, and also easy to convert to HTML and other formats. Markdown is widely used for formatting readme files, for writing messages in online discussion forums, and for creating rich text using a plain text editor.</p>
+<h2 id="why-use-markdown">Why Use Markdown?</h2>
+<ol>
+<li><strong>Simplicity</strong>: Markdown is simple to learn and use. It uses plain text formatting syntax, which is easy to read and write.</li>
+<li><strong>Portability</strong>: Markdown files are plain text, which makes them portable and compatible across different platforms and devices.</li>
+<li><strong>Readability</strong>: The syntax of Markdown is designed to be readable as-is, without looking like it’s been marked up with tags or formatting instructions.</li>
+<li><strong>Flexibility</strong>: Markdown can be easily converted to other formats such as HTML, PDF, and more, making it versatile for various documentation purposes.</li>
+</ol>
+</details>
+
+<details>
+<summary>Chapter 2: Getting Started</summary>
+
+
+
+<h2 id="getting-started-with-markdown">Getting Started with Markdown</h2>
+<h3 id="basic-syntax">Basic Syntax</h3>
+<p>Markdown syntax is straightforward and consists of a few basic elements:</p>
+<ul>
+<li><strong>Headings:</strong> Use <code>#</code> for headings. More <code>#</code> symbols indicate smaller headings.</li>
+<li><strong>Emphasis:</strong> Use <code>*</code> or <code>_</code> for italic and <code>**</code> or <code>__</code> for bold text.</li>
+<li><strong>Lists:</strong> Use <code>-</code>, <code>+</code>, or <code>*</code> for unordered lists and numbers for ordered lists.</li>
+<li><strong>Links:</strong> Use <code>[text](URL)</code> to create hyperlinks.</li>
+<li><strong>Images:</strong> Use <code>![alt text](URL)</code> for images.</li>
+<li><strong>Code:</strong> Use backticks (<code>`</code>) for inline code and triple backticks (<code>```</code>) for code blocks.</li>
+</ul>
+<p>Here’s an example of Markdown in action:</p>
+<h1 id="heading-1">Heading 1</h1>
+<h2 id="heading-2">Heading 2</h2>
+<h3 id="heading-3">Heading 3</h3>
+<p>This is a paragraph with <em>italic</em> and <strong>bold</strong> text.</p>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ul>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<p><a href="https://www.google.com">Link to Google</a></p>
+<p><img alt="Alt text" src="https://www.example.com/image.jpg"></p>
+<p>Inline code: <code>print('Hello, world!')</code></p>
+<h3 id="code-blocks">Code Blocks</h3>
+<p>In addition to inline code, Markdown allows you to create code blocks, which are useful for displaying longer snippets of code. Code blocks can be created by enclosing the code with triple backticks (<code>```</code>) or by indenting the code with four spaces.</p>
+<p>Here's an example of a code block using triple backticks:</p>
+<pre><code class="language-python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">greet</span>(<span class="hljs-params">name</span>):</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"Hello, <span class="hljs-subst">{name}</span>!"</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span>():</span>
+    name = <span class="hljs-built_in">input</span>(<span class="hljs-string">"Enter your name: "</span>)
+    greet(name)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    main()
+</code></pre>
+<p>The above code block demonstrates a simple Python script that prompts the user for their name and then greets them.</p>
+<p>Here's another example of the same code block using indentation:</p>
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">greet</span>(<span class="hljs-params">name</span>):</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"Hello, <span class="hljs-subst">{name}</span>!"</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span>():</span>
+    name = <span class="hljs-built_in">input</span>(<span class="hljs-string">"Enter your name: "</span>)
+    greet(name)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    main()
+</code></pre>
+<p>Both methods will render the code block correctly, preserving the formatting and indentation.</p>
+<h3 id="tools-and-editors">Tools and Editors</h3>
+<p>Many text editors and integrated development environments (IDEs) support Markdown, often with syntax highlighting and preview features. Some popular choices include:</p>
+<ul>
+<li><strong>Visual Studio Code:</strong> A powerful and extensible code editor with excellent Markdown support.</li>
+<li><strong>Typora:</strong> A minimalistic Markdown editor that provides a seamless live preview.</li>
+<li><strong>Atom:</strong> A hackable text editor with Markdown preview and syntax highlighting.</li>
+<li><strong>Sublime Text:</strong> A sophisticated text editor with Markdown plugins available.</li>
+</ul>
+<p>Online tools like Dillinger, StackEdit, and HackMD also offer robust Markdown editing and preview capabilities, making it easy to write and format your documents from anywhere.</p>
+</details>
+
+<details>
+<summary>Chapter 3: Advanced Topics</summary>
+
+
+<h1 id="advanced-topics-in-markdown">Advanced Topics in Markdown</h1>
+<p>Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. While the basics of Markdown are easy to learn, there are many advanced features that can help you create more complex documents. This guide will explore some of these advanced topics.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#extended-syntax">Extended Syntax</a><ul>
+<li><a href="#tables">Tables</a></li>
+<li><a href="#task-lists">Task Lists</a></li>
+</ul>
+</li>
+<li><a href="#advanced-formatting">Advanced Formatting</a><ul>
+<li><a href="#strikethrough">Strikethrough</a></li>
+<li><a href="#subscript-and-superscript">Subscript and Superscript</a></li>
+</ul>
+</li>
+<li><a href="#code-and-syntax-highlighting">Code and Syntax Highlighting</a></li>
+<li><a href="#mathematical-expressions">Mathematical Expressions</a></li>
+<li><a href="#advanced-linking">Advanced Linking</a></li>
+<li><a href="#embedding-media">Embedding Media</a></li>
+<li><a href="#metadata">Metadata</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+<h2 id="extended-syntax">Extended Syntax</h2>
+<h3 id="tables">Tables</h3>
+<p>Tables allow you to display data in a structured format.</p>
+<pre><code class="hljs less">| <span class="hljs-selector-tag">Syntax</span>      | <span class="hljs-selector-tag">Description</span> |
+| <span class="hljs-selector-tag">-----------</span> | <span class="hljs-selector-tag">-----------</span> |
+| <span class="hljs-selector-tag">Header</span>      | <span class="hljs-selector-tag">Title</span>       |
+| <span class="hljs-selector-tag">Paragraph</span>   | <span class="hljs-selector-tag">Text</span>        |
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Header</td>
+<td>Title</td>
+</tr>
+<tr>
+<td>Paragraph</td>
+<td>Text</td>
+</tr>
+</tbody></table>
+<h3 id="task-lists">Task Lists</h3>
+<p>Task lists are useful for creating to-do lists or project tracking.</p>
+<pre><code class="hljs css">- <span class="hljs-selector-attr">[x]</span> Write the proposal
+- <span class="hljs-selector-attr">[ ]</span> Review the draft
+- <span class="hljs-selector-attr">[ ]</span> Submit the final document
+</code></pre>
+<ul>
+<li><input type="checkbox" disabled="" checked=""> Write the proposal</li>
+<li><input type="checkbox" disabled=""> Review the draft</li>
+<li><input type="checkbox" disabled=""> Submit the final document</li>
+</ul>
+<h2 id="advanced-formatting">Advanced Formatting</h2>
+<h3 id="strikethrough">Strikethrough</h3>
+<p>Strikethrough text is supported in some Markdown processors.</p>
+<pre><code class="hljs vbnet">~~This <span class="hljs-keyword">text</span> <span class="hljs-built_in">is</span> struck through~~
+</code></pre>
+<p><del>This text is struck through</del></p>
+<h3 id="subscript-and-superscript">Subscript and Superscript</h3>
+<p>Markdown doesn't natively support subscript and superscript, but you can use simple text markers.</p>
+<pre><code class="hljs apache"><span class="hljs-attribute">H</span>~<span class="hljs-number">2</span>~O for water and E=mc^<span class="hljs-number">2</span>^
+</code></pre>
+<p>H<del>2</del>O for water and E=mc^2^</p>
+<h2 id="code-and-syntax-highlighting">Code and Syntax Highlighting</h2>
+<p>Syntax highlighting can make code easier to read.</p>
+<pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">helloWorld</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Hello, world!"</span>);
+}
+</code></pre>
+<pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">helloWorld</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Hello, world!"</span>);
+}
+</code></pre>
+<h2 id="mathematical-expressions">Mathematical Expressions</h2>
+<p>You can use basic inline syntax for mathematical expressions.</p>
+<pre><code class="hljs ini"><span class="hljs-attr">E</span> = mc^<span class="hljs-number">2</span>^
+</code></pre>
+<p>E = mc^2^</p>
+<h2 id="advanced-linking">Advanced Linking</h2>
+<p>You can create internal links and reference-style links.</p>
+<pre><code class="hljs csharp">[<span class="hljs-meta">Internal Link</span>](<span class="hljs-meta">#advanced-linking)</span>
+</code></pre>
+<p><a href="#advanced-linking">Internal Link</a></p>
+<p>Reference-style links are also useful for cleaner markdown.</p>
+<pre><code class="hljs less"><span class="hljs-selector-tag">This</span> <span class="hljs-selector-tag">is</span> <span class="hljs-selector-attr">[an example]</span><span class="hljs-selector-attr">[example]</span>.
+
+<span class="hljs-selector-attr">[example]</span>: <span class="hljs-selector-tag">http</span>:<span class="hljs-comment">//example.com/</span>
+</code></pre>
+<p>This is <a href="http://example.com/">an example</a>.</p>
+<h2 id="embedding-media">Embedding Media</h2>
+<p>You can embed images in your document.</p>
+<pre><code class="hljs less">!<span class="hljs-selector-attr">[Alt text]</span>(image.jpg)
+</code></pre>
+<p><img alt="Alt text" src="image.jpg"></p>
+<p>For videos and other media, you might need to rely on external links.</p>
+<pre><code class="hljs kotlin">[Watch <span class="hljs-keyword">this</span> video](https:<span class="hljs-comment">//www.youtube.com/watch?v=dQw4w9WgXcQ)</span>
+</code></pre>
+<p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Watch this video</a></p>
+<h2 id="metadata">Metadata</h2>
+<p>Some Markdown processors, like Pandoc, allow you to add metadata to your document.</p>
+<pre><code class="hljs yaml"><span class="hljs-meta">---</span>
+<span class="hljs-attr">title:</span> <span class="hljs-string">"Advanced Topics in Markdown"</span>
+<span class="hljs-attr">author:</span> <span class="hljs-string">"John Doe"</span>
+<span class="hljs-attr">date:</span> <span class="hljs-string">"2024-06-25"</span>
+<span class="hljs-meta">---
+</span></code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>Markdown is a versatile tool for writing formatted text. By leveraging these advanced features, you can create more complex and professional documents. Happy writing!</p>
+</details>
+
+
+
+
+</article><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script><script>hljs.highlightAll();</script></body></html>
