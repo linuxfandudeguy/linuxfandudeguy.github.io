@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goobledigook Bookmarklet</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+            font-family: monospace;
+        }
+        .btn-link {
+            text-decoration: none;
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            color: #0d6efd;
+            cursor: pointer;
+        }
+        .btn-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Goobledigook Bookmarklet</h1>
+        <p class="lead">This bookmarklet scrambles text on any webpage.</p>
+        <textarea id="bookmarkletCode" readonly class="form-control">javascript:(function(){    var allElements = document.querySelectorAll('*');    for (var i = 0; i < allElements.length; i++) {        var element = allElements[i];        var textNodes = getTextNodesIn(element);        for (var j = 0; j < textNodes.length; j++) {            var textNode = textNodes[j];            var scrambledText = scrambleText(textNode.nodeValue);            textNode.nodeValue = scrambledText;        }    }    function getTextNodesIn(node) {        var textNodes = [];        if (node.nodeType == 3) {            textNodes.push(node);        } else {            var children = node.childNodes;            for (var i = 0; i < children.length; i++) {                textNodes.push.apply(textNodes, getTextNodesIn(children[i]));            }        }        return textNodes;    }    function scrambleText(text) {        var words = text.split(' ');        for (var i = 0; i < words.length; i++) {            words[i] = scrambleWord(words[i]);        }        return words.join(' ');    }    function scrambleWord(word) {        if (word.length < 4) return word;        var firstChar = word.charAt(0);        var lastChar = word.charAt(word.length - 1);        var middle = word.substring(1, word.length - 1);        var chars = middle.split('');        for (var i = chars.length - 1; i > 0; i--) {            var j = Math.floor(Math.random() * (i + 1));            var temp = chars[i];            chars[i] = chars[j];            chars[j] = temp;        }        return firstChar + chars.join('') + lastChar;    }})();
+        </textarea>
+        <button onclick="runBookmarklet()" class="btn btn-primary">Run Goobledigook</button>
+
+        <!-- Link styled as a button for Bookmark Bar -->
+        <p class="mt-3">Drag the <a href="javascript:(function(){var allElements=document.querySelectorAll('*');for(var i=0;i<allElements.length;i++){var element=allElements[i];var textNodes=getTextNodesIn(element);for(var j=0;j<textNodes.length;j++){var textNode=textNodes[j];var scrambledText=scrambleText(textNode.nodeValue);textNode.nodeValue=scrambledText;}}function getTextNodesIn(node){var textNodes=[];if(node.nodeType==3){textNodes.push(node);}else{var children=node.childNodes;for(var i=0;i<children.length;i++){textNodes.push.apply(textNodes,getTextNodesIn(children[i]));}}return textNodes;}function scrambleText(text){var words=text.split(' ');for(var i=0;i<words.length;i++){words[i]=scrambleWord(words[i]);}return words.join(' ');}function scrambleWord(word){if(word.length<4)return word;var firstChar=word.charAt(0);var lastChar=word.charAt(word.length-1);var middle=word.substring(1,word.length-1);var chars=middle.split('');for(var i=chars.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var temp=chars[i];chars[i]=chars[j];chars[j]=temp;}return firstChar+chars.join('')+lastChar;}})();" class="btn btn-link">Goobledigook</a> link to your bookmark bar.</p>
+    </div>
+
+    <!-- Bootstrap JS Bundle (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function runBookmarklet() {
+            var code = document.getElementById('bookmarkletCode').value;
+            try {
+                eval(code);
+            } catch (e) {
+                alert('Error running bookmarklet: ' + e.message);
+            }
+        }
+    </script>
+</body>
+</html>
