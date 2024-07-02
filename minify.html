@@ -13,6 +13,12 @@
         <textarea id="input-js" class="w-full h-40 border border-gray-300 rounded-lg p-2 mb-4" placeholder="Enter your JavaScript code..."></textarea>
         <button id="minify-btn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">Minify JavaScript</button>
         <p id="output-message" class="text-sm mt-2"></p>
+        <!-- Display file details -->
+        <div id="file-details" class="hidden mt-4">
+            <p id="file-name" class="font-medium"></p>
+            <p id="file-size" class="text-xs text-gray-500"></p>
+            <a id="download-link" class="text-blue-500 hover:underline mt-2 cursor-pointer">Download Minified JavaScript</a>
+        </div>
     </div>
 
     <!-- JavaScript to handle minification -->
@@ -36,6 +42,19 @@
                 const minifiedCode = await response.text();
                 document.getElementById('input-js').value = minifiedCode;
                 document.getElementById('output-message').textContent = 'JavaScript minified successfully!';
+
+                // Display file details and enable download link
+                const fileName = 'minified.js';
+                const fileSize = new Blob([minifiedCode]).size;
+                document.getElementById('file-name').textContent = `File Name: ${fileName}`;
+                document.getElementById('file-size').textContent = `File Size: ${(fileSize / 1024).toFixed(2)} KB`;
+                document.getElementById('file-details').classList.remove('hidden');
+
+                // Create a Blob and download link for downloading the file
+                const blob = new Blob([minifiedCode], { type: 'application/javascript' });
+                const downloadLink = document.getElementById('download-link');
+                downloadLink.href = URL.createObjectURL(blob);
+                downloadLink.download = fileName;
             } catch (error) {
                 console.error('Error:', error);
                 document.getElementById('output-message').textContent = 'Failed to minify JavaScript.';
