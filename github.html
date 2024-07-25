@@ -4,53 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Repository Search</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f5f5f5;
-        }
-        #search-form {
-            margin-bottom: 20px;
-        }
-        input[type="text"] {
-            padding: 10px;
-            margin: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 200px;
-        }
-        button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-        }
-        #repo-info {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            width: 400px;
-            text-align: left;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div id="search-form">
-        <input type="text" id="owner" placeholder="Repository Owner">
-        <input type="text" id="repo" placeholder="Repository Name">
-        <button onclick="searchRepo()">Search</button>
+<body class="flex flex-col items-center justify-center h-screen bg-gray-100">
+    <div id="search-form" class="mb-8">
+        <input type="text" id="owner" placeholder="Repository Owner" class="p-2 m-2 border border-gray-300 rounded-md w-64">
+        <input type="text" id="repo" placeholder="Repository Name" class="p-2 m-2 border border-gray-300 rounded-md w-64">
+        <button onclick="searchRepo()" class="px-4 py-2 border-none rounded-md bg-blue-500 text-white hover:bg-blue-600">Search</button>
     </div>
-    <div id="repo-info"></div>
+    <div id="repo-info" class="bg-white p-4 rounded-md shadow-lg w-96 text-left"></div>
 
     <script>
         async function searchRepo() {
@@ -74,22 +36,22 @@
         function displayRepoInfo(repoInfo) {
             const repoInfoDiv = document.getElementById('repo-info');
             repoInfoDiv.innerHTML = `
-                <h2>${repoInfo.name}</h2>
-                <p>Description: ${repoInfo.description || 'N/A'}</p>
-                <p>Owner: ${repoInfo.owner.login}</p>
-                <p>Stars: ${repoInfo.stargazers_count}</p>
-                <p>Forks: ${repoInfo.forks_count}</p>
-                <p>Open Issues: ${repoInfo.open_issues_count}</p>
-                <p>Language: ${repoInfo.language || 'N/A'}</p>
-                <p>Created at: ${new Date(repoInfo.created_at).toLocaleDateString()}</p>
-                <p>Last updated: ${new Date(repoInfo.updated_at).toLocaleDateString()}</p>
-                <p>URL: <a href="${repoInfo.html_url}" target="_blank">${repoInfo.html_url}</a></p>
+                <h2 class="text-xl font-bold mb-2">${repoInfo.name}</h2>
+                <p class="mb-1">Description: ${repoInfo.description || 'N/A'}</p>
+                <p class="mb-1">Owner: ${repoInfo.owner.login}</p>
+                <p class="mb-1">Stars: ${repoInfo.stargazers_count}</p>
+                <p class="mb-1">Forks: ${repoInfo.forks_count}</p>
+                <p class="mb-1">Open Issues: ${repoInfo.open_issues_count}</p>
+                <p class="mb-1">Language: ${repoInfo.language || 'N/A'}</p>
+                <p class="mb-1">Created at: ${new Date(repoInfo.created_at).toLocaleDateString()}</p>
+                <p class="mb-1">Last updated: ${new Date(repoInfo.updated_at).toLocaleDateString()}</p>
+                <p class="mb-1">URL: <a href="${repoInfo.html_url}" target="_blank" class="text-blue-500 hover:underline">${repoInfo.html_url}</a></p>
             `;
         }
 
         function displayError(message) {
             const repoInfoDiv = document.getElementById('repo-info');
-            repoInfoDiv.innerHTML = `<p style="color: red;">${message}</p>`;
+            repoInfoDiv.innerHTML = `<p class="text-red-500">${message}</p>`;
         }
     </script>
 </body>
