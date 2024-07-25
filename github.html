@@ -6,34 +6,46 @@
     <title>GitHub Repository Search</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="flex flex-col items-center justify-center h-screen bg-gray-100">
-    <div id="search-form" class="mb-8">
-        <input type="text" id="owner" placeholder="Repository Owner" class="p-2 m-2 border border-gray-300 rounded-md w-64">
-        <input type="text" id="repo" placeholder="Repository Name" class="p-2 m-2 border border-gray-300 rounded-md w-64">
-        <button onclick="searchRepo()" class="px-4 py-2 border-none rounded-md bg-blue-500 text-white hover:bg-blue-600">Search</button>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div class="max-w-lg w-full p-4 bg-white rounded-md shadow-lg overflow-y-auto">
+        <div id="search-form" class="mb-8">
+            <input type="text" id="owner" placeholder="Repository Owner" class="p-2 m-2 border border-gray-300 rounded-md w-full md:w-64">
+            <input type="text" id="repo" placeholder="Repository Name" class="p-2 m-2 border border-gray-300 rounded-md w-full md:w-64">
+            <button onclick="searchRepo()" class="px-4 py-2 border-none rounded-md bg-blue-500 text-white hover:bg-blue-600">Search</button>
+        </div>
+        <div id="repo-info" class="text-left"></div>
     </div>
-    <div id="repo-info" class="bg-white p-4 rounded-md shadow-lg w-96 text-left"></div>
 
     <script>
         async function searchRepo() {
             const owner = document.getElementById('owner').value;
             const repo = document.getElementById('repo').value;
-            const url = `https://api.github.com/repos/${owner}/${repo}`;
+            const repoUrl = `https://api.github.com/repos/${owner}/${repo}`;
+            const topicsUrl = `https://api.github.com/repos/${owner}/${repo}/topics`;
 
             try {
-                const response = await fetch(url);
-                if (response.ok) {
-                    const repoInfo = await response.json();
-                    displayRepoInfo(repoInfo);
+                const [repoResponse, topicsResponse] = await Promise.all([
+                    fetch(repoUrl),
+                    fetch(topicsUrl, {
+                        headers: {
+                            'Accept': 'application/vnd.github.mercy-preview+json'
+                        }
+                    })
+                ]);
+
+                if (repoResponse.ok) {
+                    const repoInfo = await repoResponse.json();
+                    const topicsInfo = topicsResponse.ok ? await topicsResponse.json() : { names: [] };
+                    displayRepoInfo(repoInfo, topicsInfo.names);
                 } else {
-                    displayError(`Repository not found or an error occurred: ${response.statusText}`);
+                    displayError(`Repository not found or an error occurred: ${repoResponse.statusText}`);
                 }
             } catch (error) {
                 displayError(`An error occurred: ${error.message}`);
             }
         }
 
-        function displayRepoInfo(repoInfo) {
+        function displayRepoInfo(repoInfo, topics) {
             const repoInfoDiv = document.getElementById('repo-info');
             repoInfoDiv.innerHTML = `
                 <h2 class="text-xl font-bold mb-2">${repoInfo.name}</h2>
@@ -46,6 +58,7 @@
                 <p class="mb-1">Created at: ${new Date(repoInfo.created_at).toLocaleDateString()}</p>
                 <p class="mb-1">Last updated: ${new Date(repoInfo.updated_at).toLocaleDateString()}</p>
                 <p class="mb-1">URL: <a href="${repoInfo.html_url}" target="_blank" class="text-blue-500 hover:underline">${repoInfo.html_url}</a></p>
+                <p class="mb-1">Topics: ${topics.length > 0 ? topics.join(', ') : 'None'}</p>
             `;
         }
 
