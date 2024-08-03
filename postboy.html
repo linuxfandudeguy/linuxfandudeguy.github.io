@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postboy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Prism CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #2d2d2d;
+            color: #ccc;
+        }
+
+        .container-fluid {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row-flex {
+            flex: 1;
+            display: flex;
+        }
+
+        .sidebar {
+            background-color: #3c3c3c;
+            padding: 20px;
+            width: 250px;
+            border-right: 1px solid #555;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #3c3c3c;
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            background-color: #8e44ad;
+            border-color: #8e44ad;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #732d91;
+            border-color: #732d91;
+        }
+
+        .form-control {
+            background-color: #444;
+            color: white;
+            border: 1px solid #555;
+        }
+
+        .form-control:focus {
+            background-color: #444;
+            color: white;
+            border: 1px solid #9b59b6;
+            box-shadow: none;
+        }
+
+        #networkLog, #resultLog {
+            max-height: 300px;
+            overflow-y: auto;
+            background-color: #2d2d2d;
+            padding: 10px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+
+        #networkLog code, #resultLog code {
+            color: #9b59b6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="sidebar">
+                <h2>Postboy</h2>
+                <!-- Sidebar content can go here -->
+            </div>
+            <div class="main-content">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="col-md-2">
+                                <select id="method" class="form-control">
+                                    <option value="GET">GET</option>
+                                    <option value="POST">POST</option>
+                                    <option value="PUT">PUT</option>
+                                    <option value="DELETE">DELETE</option>
+                                    <option value="PATCH">PATCH</option>
+                                    <option value="OPTIONS">OPTIONS</option>
+                                    <option value="HEAD">HEAD</option>
+                                    <option value="CONNECT">CONNECT</option>
+                                    <option value="TRACE">TRACE</option>
+                                </select>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="text" id="url" class="form-control" placeholder="Enter URL">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <label for="headers">Headers (JSON)</label>
+                                <textarea id="headers" class="form-control" rows="3" placeholder="Enter headers in JSON format"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <label for="body">Body (JSON)</label>
+                                <textarea id="body" class="form-control" rows="3" placeholder="Enter body in JSON format"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <label for="responseType">Expected Response Type</label>
+                                <select id="responseType" class="form-control">
+                                    <option value="json">JSON</option>
+                                    <option value="xml">XML</option>
+                                    <option value="text">Text</option>
+                                    <option value="html">HTML</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <button id="sendRequest" class="btn btn-primary btn-block">Send Request</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-flex">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Network Console</h2>
+                            </div>
+                            <div class="card-body">
+                                <pre id="networkLog" class="line-numbers"><code class="language-json"></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Result Console</h2>
+                            </div>
+                            <div class="card-body">
+                                <pre id="resultLog" class="line-numbers"><code class="language-json"></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Axios, js-beautify, Bootstrap JS, and Prism.js -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify-html.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-markdown.min.js"></script>
+    <script>
+        document.getElementById('sendRequest').addEventListener('click', async () => {
+            const method = document.getElementById('method').value;
+            const url = document.getElementById('url').value;
+            const headers = document.getElementById('headers').value ? JSON.parse(document.getElementById('headers').value) : {};
+            const body = document.getElementById('body').value ? JSON.parse(document.getElementById('body').value) : null;
+            const responseType = document.getElementById('responseType').value;
+
+            const options = {
+                method,
+                url,
+                headers,
+                responseType,
+            };
+
+            if (body) {
+                options.data = body;
+            }
+
+            logRequest({ method, url, headers, body, responseType });
+
+            try {
+                const response = await axios(options);
+                let formattedData;
+                if (responseType === 'json') {
+                    formattedData = js_beautify(response.data, { indent_size: 2 });
+                } else if (responseType === 'html') {
+                    formattedData = js_beautify(response.data, { indent_size: 2, indent_inner_html: true });
+                } else {
+                    formattedData = response.data;
+                }
+                logResult(formattedData, responseType, response.headers, response.status);
+            } catch (error) {
+                logResult(error.toString(), 'text');
+            }
+        });
+
+        function logRequest(request) {
+            const log = JSON.stringify(request, null, 2);
+            const logElement = document.getElementById('networkLog');
+            logElement.innerHTML = `<code class="language-json">${Prism.highlight(log, Prism.languages.json, 'json')}</code>`;
+            Prism.highlightAll();
+        }
+
+        function logResult(result, responseType, headers = {}, status = '') {
+            const resultLogElement = document.getElementById('resultLog');
+            const headerLog = `Status: ${status}\nHeaders: ${JSON.stringify(headers, null, 2)}`;
+            resultLogElement.innerHTML = `<code class="language-${responseType}">${Prism.highlight(headerLog, Prism.languages.json, 'json')}</code>
+                                          <hr>
+                                          <code class="language-${responseType}">${Prism.highlight(result, Prism.languages[responseType], responseType)}</code>`;
+            Prism.highlightAll();
+        }
+    </script>
+</body>
+</html>
