@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XDRX Viewer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+  <div class="bg-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-xl font-bold mb-4">Upload and Render XDRX File</h1>
+    <label class="block mb-4">
+      <span class="sr-only">Choose File</span>
+      <input type="file" id="fileInput" accept=".xdrx" class="block w-full text-sm text-gray-500
+      file:mr-4 file:py-2 file:px-4
+      file:rounded-full file:border-0
+      file:text-sm file:font-semibold
+      file:bg-indigo-50 file:text-indigo-700
+      hover:file:bg-indigo-100
+      cursor-pointer"/>
+    </label>
+    <button id="renderBtn" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">
+      Render Image
+    </button>
+    <canvas id="canvas" class="border mt-4"></canvas>
+
+    <script>
+      const fileInput = document.getElementById('fileInput');
+      const renderBtn = document.getElementById('renderBtn');
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+      let file;
+
+      fileInput.addEventListener('change', (event) => {
+        file = event.target.files[0];
+      });
+
+      renderBtn.addEventListener('click', () => {
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            const hexData = e.target.result.trim().split('\n');
+            const pixelSize = 1;  // Each hex code corresponds to 1 pixel
+            const width = hexData[0].split(' ').length;
+            const height = hexData.length;
+
+            // Set the canvas dimensions based on the width and height of the data
+            canvas.width = width * pixelSize;
+            canvas.height = height * pixelSize;
+
+            hexData.forEach((line, y) => {
+              const hexCodes = line.split(' ');
+              hexCodes.forEach((hex, x) => {
+                // Ensure hex is valid by stripping any unwanted characters (e.g., '#')
+                ctx.fillStyle = `#${hex.replace('#', '').trim()}`;
+                ctx.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
+              });
+            });
+          };
+          reader.readAsText(file);
+        } else {
+          alert('Please select an xdrx file first.');
+        }
+      });
+    </script>
+  </div>
+</body>
+</html>
