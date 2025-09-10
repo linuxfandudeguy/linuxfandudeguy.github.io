@@ -77,5 +77,23 @@ iframe {
   inset 0 0 0 3px #89CFF0; 
   width: 90%;
   height: 600px;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #89CFF0 #ffffff; /* thumb / track for Firefox */
 }
+iframe::-webkit-scrollbar {
+  width: 12px; /* width of scrollbar */
+}
+
+iframe::-webkit-scrollbar-track {
+  background: #ffffff; /* track color */
+}
+
+iframe::-webkit-scrollbar-thumb {
+  background-color: #89CFF0; /* thumb color */
+  border-radius: 6px;         /* rounded edges */
+  border: 2px solid #ffffff;  /* optional: space around thumb */
+}
+
+iframe::-webkit-scrollbar-thumb:hover {
+  background-color: #55aadd; /* slightly darker on hover */
 
