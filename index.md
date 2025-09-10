@@ -1,3 +1,4 @@
 ---
 layout: default
+title: main page
 ---
