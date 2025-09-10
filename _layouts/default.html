@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }} | {{ site.title }}</title>
-<link rel="stylesheet" href="{{ '/assets/styles.css?v=' }}{{ site.time | date: '%Y%m%d%H%M%S' }}">
-</head>
+  {% assign timestamp = site.time | date: "%Y%m%d%H%M%S" %}
+  <link rel="stylesheet" href="/assets/styles.css?v={{ timestamp }}"></head>
 <body>
   <header>{{ site.title }}</header>
 
