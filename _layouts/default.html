@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/styles.css?v=' | append: site.time | date: '%Y%m%d%H%M%S' }}">
+</head>
+<body>
+  <header>{{ site.title }}</header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>© 2025 Durokotte / デュロコッテ</footer>
+</body>
+</html>
