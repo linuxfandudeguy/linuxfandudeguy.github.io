@@ -8,8 +8,25 @@
     font-size: 13px;
     margin: 0;
     padding: 0;
-    cursor: url(./cursor.cur, auto);
   }
+/* Make all text elements look like <p> */
+p, h1, h2, h3, h4, h5, h6, span, li, div, pre {
+  font-family: "MS PGothic", monospace;
+  font-size: 13px;
+  color: #000000;
+  line-height: 1.4;
+  margin: 0 0 10px 0; /* spacing similar to paragraphs */
+}
+
+/* Optional: links inherit paragraph style but keep hover effect */
+a {
+  color: #0000FF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
 
   header {
     background-color: #e0e0e0;
