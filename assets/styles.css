@@ -17,6 +17,7 @@ body {
 /* Header */
 header {
   background-color: #e0e0e0;
+  font-family: "MS PGothic", monospace;
   border-bottom: 2px solid #000;
   padding: 8px 15px;
   font-weight: bold;
