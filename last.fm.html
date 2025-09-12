@@ -7,7 +7,12 @@ layout: iframe
 
 <script>
  
-
+  // Escape a string (API data) into HTML entities
+  function escapeHTML(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
   // Unescape HTML entities back to real HTML
   function unescapeHTML(str) {
     const div = document.createElement('div');
