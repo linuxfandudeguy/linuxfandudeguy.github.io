@@ -28,7 +28,7 @@ layout: iframe
       const trackUrl = track.url || '#';
       const artistUrl = trackUrl.split('/_/')[0] || '#'; // <-- artist URL
       const albumName = track.album ? track.album['#text'] : 'N/A';
-      const imageUrl = (track.image || []).find(img => img.size === 'large')?.['#text'] || '';
+      const imageUrl = (track.image || []).find(img => img.size === 'medium')?.['#text'] || '';
 
       // Pre-escaped HTML
       let html = '';
