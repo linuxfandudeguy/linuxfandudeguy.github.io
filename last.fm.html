@@ -6,14 +6,6 @@ layout: iframe
 <div id="lastfm-info">Loading...</div>
 
 <script>
- 
-  // Escape a string (API data) into HTML entities
-  function escapeHTML(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
-  // Unescape HTML entities back to real HTML
   function unescapeHTML(str) {
     const div = document.createElement('div');
     div.innerHTML = str;
@@ -29,18 +21,28 @@ layout: iframe
       if (!response.ok) throw new Error('Network response was not ok');
 
       const data = await response.json();
+      const track = data.recenttracks.track[0] || {};
 
-      // Build the HTML variable as ESCAPED entities
-      const html = 
-        '&lt;p&gt;&lt;strong&gt;Artist:&lt;/strong&gt; ' + escapeHTML(data.artist || 'N/A') + '&lt;/p&gt;' +
-        '&lt;p&gt;&lt;strong&gt;Track:&lt;/strong&gt; ' + escapeHTML(data.track || 'N/A') + '&lt;/p&gt;' +
-        '&lt;p&gt;&lt;strong&gt;Album:&lt;/strong&gt; ' + escapeHTML(data.album || 'N/A') + '&lt;/p&gt;';
+      const artistName = track.artist ? track.artist['#text'] : 'N/A';
+      const trackName = track.name || 'N/A';
+      const trackUrl = track.url || '#';
+      const artistUrl = trackUrl.split('/_/')[0] || '#'; // <-- artist URL
+      const albumName = track.album ? track.album['#text'] : 'N/A';
+      const imageUrl = (track.image || []).find(img => img.size === 'medium')?.['#text'] || '';
 
-      // Unescape just before inserting
+      // Pre-escaped HTML
+      let html = '';
+      html += '&lt;p&gt;&lt;strong&gt;Artist:&lt;/strong&gt; &lt;a href=&quot;' + artistUrl + '&quot; target=&quot;_blank&quot;&gt;' + artistName + '&lt;/a&gt;&lt;/p&gt;';
+      html += '&lt;p&gt;&lt;strong&gt;Track:&lt;/strong&gt; &lt;a href=&quot;' + trackUrl + '&quot; target=&quot;_blank&quot;&gt;' + trackName + '&lt;/a&gt;&lt;/p&gt;';
+      html += '&lt;p&gt;&lt;strong&gt;Album:&lt;/strong&gt; ' + albumName + '&lt;/p&gt;';
+      if (imageUrl) {
+        html += '&lt;img src=&quot;' + imageUrl + '&quot; alt=&quot;' + trackName + '&quot; /&gt;';
+      }
+
       container.innerHTML = unescapeHTML(html);
 
     } catch (err) {
-      container.innerHTML = unescapeHTML('&lt;p style="color:red;"&gt;Error: ' + escapeHTML(err.message) + '&lt;/p&gt;');
+      container.innerHTML = unescapeHTML('&lt;p style=&quot;color:red;&quot;&gt;Error: ' + err.message + '&lt;/p&gt;');
       console.error(err);
     }
   }
@@ -48,3 +50,4 @@ layout: iframe
   fetchLastFM();
   setInterval(fetchLastFM, 5000);
 </script>
+
