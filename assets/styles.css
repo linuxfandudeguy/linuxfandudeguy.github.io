@@ -162,7 +162,7 @@ iframe::-webkit-scrollbar-thumb:hover {
 hr {
   border: none;
   height: 50px; 
-  background: url('/8f42a18e.gif') repeat-x center;
+  background: url('./8f42a18e.gif') repeat-x center;
   margin: 15px 0;
 }
 
