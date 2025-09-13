@@ -31,5 +31,5 @@ User-agent: *
 Disallow: /
 
 # Prevent scraping of files prefixed with "frames-" anywhere
-Disallow: /*/frames-*
-Disallow: /frames-*
+Disallow: /*/iframes-*
+Disallow: /iframes-*
