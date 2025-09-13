@@ -52,5 +52,35 @@
     });
   });
 </script>
+<script>
+  const clickSound = new Audio('./assets/undertale-select-sound.mp3');
+  clickSound.preload = "auto"; // preload the audio
+
+  let audioUnlocked = false;
+
+  // Unlock audio on first user gesture
+  function unlockAudio() {
+    clickSound.play().catch(() => {});
+    clickSound.pause();
+    clickSound.currentTime = 0;
+    audioUnlocked = true;
+
+    document.removeEventListener('click', unlockAudio);
+    document.removeEventListener('keydown', unlockAudio);
+  }
+
+  document.addEventListener('click', unlockAudio);
+  document.addEventListener('keydown', unlockAudio);
+
+  // Play sound on link click
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (!audioUnlocked) return;
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  });
+</script>
+
 </body>
 </html>
