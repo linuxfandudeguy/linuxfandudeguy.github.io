@@ -23,20 +23,34 @@
   new bubbleCursor();
 </script>
 <script>
-  // Create an audio object for the cursor sound
   const cursorSound = new Audio('./assets/menucursor.wav');
+  cursorSound.preload = "auto"; // preloads the audio
 
-  // Select all links on the page
-  const links = document.querySelectorAll('a');
+  let audioUnlocked = false;
 
-  // Add a mouseover event to each link
-  links.forEach(link => {
+  // Unlock audio on first user gesture
+  function unlockAudio() {
+    cursorSound.play().catch(() => {});
+    cursorSound.pause();
+    cursorSound.currentTime = 0;
+    audioUnlocked = true;
+
+    // Remove the event listeners after unlocking
+    document.removeEventListener('click', unlockAudio);
+    document.removeEventListener('keydown', unlockAudio);
+  }
+
+  document.addEventListener('click', unlockAudio);
+  document.addEventListener('keydown', unlockAudio);
+
+  // Add hover sound once audio is unlocked
+  document.querySelectorAll('a').forEach(link => {
     link.addEventListener('mouseenter', () => {
-      cursorSound.currentTime = 0; // reset sound to start
+      if (!audioUnlocked) return;
+      cursorSound.currentTime = 0;
       cursorSound.play();
     });
   });
 </script>
-
 </body>
 </html>
