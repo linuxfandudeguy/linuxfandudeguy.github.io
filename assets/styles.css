@@ -158,3 +158,12 @@ iframe::-webkit-scrollbar-thumb {
 iframe::-webkit-scrollbar-thumb:hover {
   background-color: #55aadd;
 }
+
+/* Horizontal rule styled like --- in markdown */
+hr {
+  border: none;
+  height: 20px; 
+  background: url('assets/8f42a18e.gif') repeat-x center;
+  margin: 15px 0;
+}
+
