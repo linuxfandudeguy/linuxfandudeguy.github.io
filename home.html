@@ -1,0 +1,66 @@
+---
+layout: default
+title: ホームページ/homepage
+---
+
+<h1 style="font-size:120px; margin:0;">DuroKotte/デュロコッテ</h1>
+<h2>about me</h2>
+<p>hello :3</p>
+<p>i am (mostly) a full-stack web programmer and i love to make websites with Jekyll and other frameworks. I also love vocaloid and UTAU (especially megurine luka, hatsune miku and kasane teto)</p>
+<li><a href="https://scratch.mit.edu/users/yttfg0687/">scratch profile</a></li>
+<li><a href="https://www.youtube.com/channel/UC5oQMx7RoQF5rBFWA74EP0g">youtube channel</a></li>
+<li><a href="https://github.com/linuxfandudeguy">github profile</a></li>
+<li><a href="https://github.com/linuxfandudeguy.gpg">my pgp key</a></li>
+<h2>projects/プロジェクト</h2>
+
+{% include projects.html %}
+
+<h2>my atabook/私のAtabook</h2>
+<iframe src="https://durokotte.atabook.org/"></iframe>
+
+<!-- Left side -->
+<div style="
+  position: absolute;
+  top: 100px;  /* distance from top of the page container */
+  left: 5px; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+">
+  <h2 style="margin: 0 0 10px 0;">songs i am listening to / 聴いてる曲</h2>
+  <iframe 
+    src="{{ '/iframe-last.fm.html' | relative_url }}" 
+    style="
+      width: 300px;
+      height: 300px;
+      border: none;
+      overflow: hidden;
+    "
+    scrolling="no"
+  ></iframe>
+</div>
+
+<!-- Right side -->
+<div style="
+  position: absolute;
+  top: 100px;  /* distance from top of the page container */
+  right: 5px; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 10px;
+">
+  <h2 style="margin: 0 0 10px 0;">chat / チャット</h2>
+  <iframe 
+    id="lastfm-frame"
+    src="https://www3.cbox.ws/box/?boxid=3549057&boxtag=grdFUf" 
+    style="
+      width: 300px;
+      height: 300px;
+      border: none;
+      overflow: hidden;
+    "
+    scrolling="no"
+  ></iframe>
+</div>
