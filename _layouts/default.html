@@ -22,5 +22,21 @@
 
   new bubbleCursor();
 </script>
+<script>
+  // Create an audio object for the cursor sound
+  const cursorSound = new Audio('./assets/menucursor.wav');
+
+  // Select all links on the page
+  const links = document.querySelectorAll('a');
+
+  // Add a mouseover event to each link
+  links.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      cursorSound.currentTime = 0; // reset sound to start
+      cursorSound.play();
+    });
+  });
+</script>
+
 </body>
 </html>
