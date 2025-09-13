@@ -51,8 +51,28 @@ title: ホームページ/homepage
   align-items: flex-end;
   padding: 10px;
 ">
-<h2>statuses/ステータス</h2>
-{% include statuses.html %}
+<style>
+  .sidebar-left {
+    position: absolute;
+    top: 100px;
+    left: 5px;
+    width: 320px;
+  }
+  .sidebar-right {
+    position: absolute;
+    top: 100px;
+    right: 5px;
+    width: 320px;
+  }
+  .statuses-container {
+    margin-top: 450px; /* push below sidebars */
+    clear: both;
+  }
+</style>
+
+<div class="statuses-container">
+  {% include statuses.html %}
+</div>
 
   <h2 style="margin: 0 0 10px 0;">chat / チャット</h2>
   <iframe 
