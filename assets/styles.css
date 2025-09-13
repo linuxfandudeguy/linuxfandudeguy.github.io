@@ -161,7 +161,7 @@ iframe::-webkit-scrollbar-thumb:hover {
 /* Horizontal rule styled like --- in markdown */
 hr {
   border: none;
-  height: 20px; 
+  height: 50px; 
   background: url('assets/8f42a18e.gif') repeat-x center;
   margin: 15px 0;
 }
