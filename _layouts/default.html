@@ -24,7 +24,7 @@
 </script>
 <script>
   const cursorSound = new Audio('./assets/menucursor.ogg');
-  cursorSound.preload = "auto"; // preloads the audio
+  cursorSound.preload = "auto"; // preload the audio
 
   let audioUnlocked = false;
 
@@ -35,7 +35,6 @@
     cursorSound.currentTime = 0;
     audioUnlocked = true;
 
-    // Remove the event listeners after unlocking
     document.removeEventListener('click', unlockAudio);
     document.removeEventListener('keydown', unlockAudio);
   }
@@ -43,13 +42,19 @@
   document.addEventListener('click', unlockAudio);
   document.addEventListener('keydown', unlockAudio);
 
-  // Add hover sound once audio is unlocked
+  // Select only text-only links (anchors without images or other HTML inside)
   document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('mouseenter', () => {
-      if (!audioUnlocked) return;
-      cursorSound.currentTime = 0;
-      cursorSound.play();
-    });
+    const hasOnlyText = Array.from(link.childNodes).every(
+      node => node.nodeType === Node.TEXT_NODE
+    );
+
+    if (hasOnlyText) {
+      link.addEventListener('mouseenter', () => {
+        if (!audioUnlocked) return;
+        cursorSound.currentTime = 0;
+        cursorSound.play();
+      });
+    }
   });
 </script>
 
