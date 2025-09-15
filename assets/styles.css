@@ -207,4 +207,31 @@ hr {
   img { margin-top: 0.3rem; }
   .post { padding: 0.3rem 0; }
 }
+/* === Responsive images and iframes === */
+img, iframe {
+  max-width: 100%;       /* scale down if container shrinks */
+  height: auto;          /* maintain aspect ratio */
+  display: block;        /* stay in document flow */
+  flex-shrink: 1;        /* allow shrinking in flex containers */
+  min-width: 0;          /* prevent overflow inside flex */
+  margin: 0.5rem 0;      /* consistent spacing */
+}
+
+/* Extra for small screens */
+@media (max-width: 768px) {
+  img, iframe {
+    width: 100%;         /* fill container width */
+    height: auto;        /* maintain aspect ratio */
+    margin: 0.3rem 0;    /* slightly smaller spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  img, iframe {
+    width: 100%;         /* full width on tiny screens */
+    height: auto;
+    margin: 0.2rem 0;    /* keep compact spacing */
+  }
+}
+
 
