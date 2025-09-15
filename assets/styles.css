@@ -1,4 +1,4 @@
-/* === 2ちゃんねる-inspired CSS (Responsive) === */
+/* === 2ちゃんねる-inspired CSS (Responsive, non-overlapping) === */
 
 /* === Font embedding === */
 @font-face {
@@ -15,10 +15,11 @@ body {
   background-color: #ffffff;
   color: #000000;
   font-family: "MS PGothic", "Web437_NEC_APC3", monospace, sans-serif;
-  font-size: clamp(12px, 1.2vw, 14px); /* scales with screen */
+  font-size: clamp(12px, 1.2vw, 14px);
   margin: 0;
   padding: 0;
   line-height: 1.5;
+  box-sizing: border-box;
 }
 
 /* Header */
@@ -30,6 +31,7 @@ header {
   font-weight: bold;
   text-align: center;
   font-size: clamp(14px, 2vw, 18px);
+  position: relative;
 }
 
 /* Main content container */
@@ -38,12 +40,15 @@ main {
   margin: 1rem auto;
   padding: 0 1rem;
   width: 100%;
+  display: block;
 }
 
 /* Posts */
 .post {
   border-bottom: 1px dotted #aaa;
   padding: 0.5rem 0;
+  background: #fff;
+  display: block;
 }
 
 .post .title {
@@ -61,7 +66,7 @@ main {
 .post .content {
   margin-top: 0.3rem;
   white-space: pre-wrap;
-  word-break: break-word; /* prevents overflow */
+  word-break: break-word;
 }
 
 /* Images */
@@ -88,9 +93,10 @@ footer {
   font-size: 0.8rem;
   color: #555;
   margin: 2rem 0 1rem;
+  position: relative;
 }
 
-/* === Base text styling === */
+/* Base text styling */
 :where(p, h1, h2, h3, h4, h5, h6, span, li, a, div, pre) {
   font-family: inherit;
   font-size: inherit;
@@ -162,19 +168,11 @@ hr {
 
 /* StatusCafe widget */
 #statuscafe {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-  max-width: 100%;
-  word-break: break-word;
-  border: 1px solid midnightblue; 
-}
-#statuscafe-username {
-  margin-bottom: 0.5rem;
-}
-#statuscafe-content {
-  margin: 0 0.5rem 0.5rem;
+  padding: 0.5rem;
+  background-color: azure;
+  border: 1px solid midnightblue;
+  display: block;
+  margin-top: 1rem;
 }
 
 /* === Responsive tweaks === */
@@ -191,50 +189,16 @@ hr {
   img { margin-top: 0.3rem; }
   .post { padding: 0.3rem 0; }
 }
-/* === Layout fixes to keep everything in one flow === */
 
-/* Make sure everything stays in normal document flow */
-body, header, main, footer, div, section, article {
-  position: relative;
-  display: block;
-  width: 100%;
-  clear: both; /* stop float overlaps */
-}
-
-/* Prevent overlap from flex/absolute children */
+/* === Global mobile-friendly defaults === */
 * {
   box-sizing: border-box;
   max-width: 100%;
 }
 
-/* Images, iframes, videos stack cleanly */
-img, video, iframe {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  position: relative;
-  z-index: 1;
+/* === Flex-wrap for containers that had horizontal layout === */
+main, .post, #statuscafe {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; /* allows content to wrap instead of overlapping */
 }
-
-/* Fix posts stacking */
-.post {
-  position: relative;
-  background: white; /* optional: makes sure it covers bg images */
-  z-index: 1;
-}
-
-/* Ensure header/footer always on top of background */
-header, footer {
-  position: relative;
-  z-index: 2;
-}
-
-/* If using absolutely positioned widgets (like statuscafe), 
-   force them to flow instead of floating */
-#statuscafe {
-  position: relative;
-  display: block;
-  clear: both;
-  margin-top: 1rem;
-}
-
