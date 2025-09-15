@@ -1,1 +1,171 @@
-/* === 2ちゃんねる-inspired CSS (Responsive) === */ /* === Font embedding === */ @font-face { font-family: "Web437_NEC_APC3"; src: url("/assets/Web437_NEC_APC3_8x16.woff") format("woff"); font-weight: normal; font-style: normal; font-display: swap; } body { background-image: url('./kao_uwarn_blue.gif'); background-repeat: repeat; background-color: #ffffff; color: #000000; font-family: "MS PGothic", "Web437_NEC_APC3", monospace, sans-serif; font-size: clamp(12px, 1.2vw, 14px); /* scales with screen */ margin: 0; padding: 0; line-height: 1.5; } /* Header */ header { background-color: #e0e0e0; font-family: inherit; border-bottom: 2px solid #000; padding: 0.5rem 1rem; font-weight: bold; text-align: center; font-size: clamp(14px, 2vw, 18px); } /* Main content container */ main { max-width: 900px; margin: 1rem auto; padding: 0 1rem; width: 100%; } /* Posts */ .post { border-bottom: 1px dotted #aaa; padding: 0.5rem 0; } .post .title { font-weight: bold; color: #008800; margin-bottom: 0.25rem; } .post .subtitle { font-size: 0.9em; color: #555; margin-left: 0.5rem; } .post .content { margin-top: 0.3rem; white-space: pre-wrap; word-break: break-word; /* prevents overflow */ } /* Images */ img { max-width: 100%; height: auto; margin-top: 0.5rem; border: 1px solid #ccc; display: block; } /* Links */ a { color: #0000FF; text-decoration: none; } a:hover { text-decoration: underline; } /* Footer */ footer { text-align: center; font-size: 0.8rem; color: #555; margin: 2rem 0 1rem; } /* === Base text styling === */ :where(p, h1, h2, h3, h4, h5, h6, span, li, a, div, pre) { font-family: inherit; font-size: inherit; color: #000000; line-height: 1.5; margin: 0; } p { margin-bottom: 0.8rem; } /* Headings */ h1 { font-size: clamp(20px, 4vw, 24px); margin: 1rem 0 0.6rem; } h2 { font-size: clamp(18px, 3.5vw, 20px); margin: 0.8rem 0 0.5rem; } h3 { font-size: clamp(16px, 3vw, 17px); margin: 0.6rem 0 0.4rem; } h4 { font-size: clamp(14px, 2.5vw, 15px); margin: 0.5rem 0 0.3rem; } h5 { font-size: clamp(13px, 2vw, 14px); margin: 0.4rem 0 0.25rem; } h6 { font-size: clamp(12px, 1.8vw, 13px); margin: 0.3rem 0 0.2rem; } /* Lists */ li { margin-bottom: 0.5rem; padding-left: 0.5rem; } /* Divs */ div { margin-bottom: 0.8rem; } /* Preformatted */ pre { font-family: "MS PGothic", monospace; font-size: 0.9em; white-space: pre-wrap; margin-bottom: 0.8rem; overflow-x: auto; } /* Iframe styling */ iframe { border: 0; display: block; margin: 1rem auto; padding: 0.5rem; background-color: white; box-shadow: 0 0 0 8px #89CFF0, inset 0 0 0 2px #89CFF0; width: 100%; max-width: 100%; height: clamp(300px, 70vh, 600px); scrollbar-width: thin; scrollbar-color: #89CFF0 #ffffff; } /* Webkit scrollbars */ iframe::-webkit-scrollbar { width: 10px; } iframe::-webkit-scrollbar-track { background: #ffffff; } iframe::-webkit-scrollbar-thumb { background-color: #89CFF0; border-radius: 6px; border: 2px solid #ffffff; } iframe::-webkit-scrollbar-thumb:hover { background-color: #55aadd; } /* HR divider */ hr { border: none; height: 40px; background: url('./8f42a18e.gif') repeat-x center; margin: 1rem 0; } /* StatusCafe widget */ #statuscafe { padding: 0.5rem; background-color: azure; border: 1px solid midnightblue; } #statuscafe-username { margin-bottom: 0.5rem; } #statuscafe-content { margin: 0 0.5rem 0.5rem; } /* === Responsive tweaks === */ @media (max-width: 768px) { header { font-size: 1rem; padding: 0.5rem; } main { padding: 0 0.5rem; } iframe { height: 50vh; } } @media (max-width: 480px) { body { font-size: 12px; } header { font-size: 0.9rem; } iframe { height: 40vh; } img { margin-top: 0.3rem; } .post { padding: 0.3rem 0; } } /* Global mobile-friendly defaults */ * { box-sizing: border-box; max-width: 100%; } img, video, iframe { max-width: 100%; height: auto; display: block; }
+/* === 2ちゃんねる-inspired CSS (Non-Responsive) === */
+
+/* === Font embedding === */
+@font-face {
+  font-family: "Web437_NEC_APC3";
+  src: url("/assets/Web437_NEC_APC3_8x16.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-image: url('./kao_uwarn_blue.gif');
+  background-repeat: repeat;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "MS PGothic", "Web437_NEC_APC3", monospace, sans-serif;
+  font-size: 13px; /* fixed font size */
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  background-color: #e0e0e0;
+  font-family: inherit;
+  border-bottom: 2px solid #000;
+  padding: 8px 16px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px; /* fixed header font size */
+}
+
+/* Main content container */
+main {
+  max-width: 900px;
+  margin: 16px auto;
+  padding: 0 16px;
+  width: 100%;
+}
+
+/* Posts */
+.post {
+  border-bottom: 1px dotted #aaa;
+  padding: 8px 0;
+}
+
+.post .title {
+  font-weight: bold;
+  color: #008800;
+  margin-bottom: 4px;
+}
+
+.post .subtitle {
+  font-size: 12px;
+  color: #555;
+  margin-left: 8px;
+}
+
+.post .content {
+  margin-top: 4px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  display: block;
+}
+
+/* Links */
+a {
+  color: #0000FF;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+  margin: 32px 0 16px;
+}
+
+/* Base text styling */
+:where(p, h1, h2, h3, h4, h5, h6, span, li, a, div, pre) {
+  font-family: inherit;
+  font-size: inherit;
+  color: #000000;
+  line-height: 1.5;
+  margin: 0;
+}
+
+p { margin-bottom: 12px; }
+
+/* Headings */
+h1 { font-size: 24px; margin: 16px 0 10px; }
+h2 { font-size: 20px; margin: 12px 0 8px; }
+h3 { font-size: 18px; margin: 10px 0 6px; }
+h4 { font-size: 16px; margin: 8px 0 4px; }
+h5 { font-size: 14px; margin: 6px 0 3px; }
+h6 { font-size: 13px; margin: 4px 0 2px; }
+
+/* Lists */
+li { margin-bottom: 8px; padding-left: 8px; }
+
+/* Divs */
+div { margin-bottom: 12px; }
+
+/* Preformatted */
+pre {
+  font-family: "MS PGothic", monospace;
+  font-size: 12px;
+  white-space: pre-wrap;
+  margin-bottom: 12px;
+  overflow-x: auto;
+}
+
+/* Iframe styling */
+iframe {
+  border: 0;
+  display: block;
+  margin: 16px auto;
+  padding: 8px;
+  background-color: white;
+  box-shadow: 0 0 0 8px #89CFF0, inset 0 0 0 2px #89CFF0;
+  width: 100%;
+  max-width: 900px;
+  height: 400px; /* fixed height */
+  scrollbar-width: thin;
+  scrollbar-color: #89CFF0 #ffffff;
+}
+
+/* Webkit scrollbars for iframe */
+iframe::-webkit-scrollbar { width: 10px; }
+iframe::-webkit-scrollbar-track { background: #ffffff; }
+iframe::-webkit-scrollbar-thumb {
+  background-color: #89CFF0;
+  border-radius: 6px;
+  border: 2px solid #ffffff;
+}
+iframe::-webkit-scrollbar-thumb:hover { background-color: #55aadd; }
+
+/* HR divider */
+hr {
+  border: none;
+  height: 40px;
+  background: url('./8f42a18e.gif') repeat-x center;
+  margin: 16px 0;
+}
+
+/* StatusCafe widget */
+#statuscafe {
+  padding: 8px;
+  background-color: azure;
+  border: 1px solid midnightblue;
+}
+#statuscafe-username { margin-bottom: 8px; }
+#statuscafe-content { margin: 0 8px 8px; }
+
+/* Global defaults */
+* { box-sizing: border-box; }
+img, video, iframe { max-width: 100%; height: auto; display: block; }
