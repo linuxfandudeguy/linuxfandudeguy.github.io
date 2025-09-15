@@ -1,4 +1,4 @@
-/* === 2ちゃんねる-inspired CSS (Responsive, non-overlapping) === */
+/* === 2ちゃんねる-inspired CSS (Responsive, shrinkable) === */
 
 /* === Font embedding === */
 @font-face {
@@ -20,6 +20,10 @@ body {
   padding: 0;
   line-height: 1.5;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-width: 0; /* allows shrinking */
 }
 
 /* Header */
@@ -31,7 +35,7 @@ header {
   font-weight: bold;
   text-align: center;
   font-size: clamp(14px, 2vw, 18px);
-  position: relative;
+  flex-shrink: 0;
 }
 
 /* Main content container */
@@ -40,7 +44,12 @@ main {
   margin: 1rem auto;
   padding: 0 1rem;
   width: 100%;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 /* Posts */
@@ -48,13 +57,17 @@ main {
   border-bottom: 1px dotted #aaa;
   padding: 0.5rem 0;
   background: #fff;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .post .title {
   font-weight: bold;
   color: #008800;
   margin-bottom: 0.25rem;
+  word-break: break-word;
 }
 
 .post .subtitle {
@@ -76,6 +89,7 @@ img {
   margin-top: 0.5rem;
   border: 1px solid #ccc;
   display: block;
+  flex-shrink: 1;
 }
 
 /* Links */
@@ -93,7 +107,7 @@ footer {
   font-size: 0.8rem;
   color: #555;
   margin: 2rem 0 1rem;
-  position: relative;
+  flex-shrink: 0;
 }
 
 /* Base text styling */
@@ -105,8 +119,6 @@ footer {
   margin: 0;
 }
 
-p { margin-bottom: 0.8rem; }
-
 /* Headings */
 h1 { font-size: clamp(20px, 4vw, 24px); margin: 1rem 0 0.6rem; }
 h2 { font-size: clamp(18px, 3.5vw, 20px); margin: 0.8rem 0 0.5rem; }
@@ -116,10 +128,7 @@ h5 { font-size: clamp(13px, 2vw, 14px); margin: 0.4rem 0 0.25rem; }
 h6 { font-size: clamp(12px, 1.8vw, 13px); margin: 0.3rem 0 0.2rem; }
 
 /* Lists */
-li {
-  margin-bottom: 0.5rem;
-  padding-left: 0.5rem;
-}
+li { margin-bottom: 0.5rem; padding-left: 0.5rem; }
 
 /* Divs */
 div { margin-bottom: 0.8rem; }
@@ -131,6 +140,8 @@ pre {
   white-space: pre-wrap;
   margin-bottom: 0.8rem;
   overflow-x: auto;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 /* Iframe styling */
@@ -146,6 +157,8 @@ iframe {
   height: clamp(300px, 70vh, 600px);
   scrollbar-width: thin;
   scrollbar-color: #89CFF0 #ffffff;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 /* Webkit scrollbars */
@@ -164,6 +177,7 @@ hr {
   height: 40px;
   background: url('./8f42a18e.gif') repeat-x center;
   margin: 1rem 0;
+  flex-shrink: 0;
 }
 
 /* StatusCafe widget */
@@ -171,12 +185,16 @@ hr {
   padding: 0.5rem;
   background-color: azure;
   border: 1px solid midnightblue;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  min-width: 0;
   margin-top: 1rem;
 }
 
 /* === Responsive tweaks === */
 @media (max-width: 768px) {
+  body { font-size: 13px; }
   header { font-size: 1rem; padding: 0.5rem; }
   main { padding: 0 0.5rem; }
   iframe { height: 50vh; }
@@ -190,15 +208,3 @@ hr {
   .post { padding: 0.3rem 0; }
 }
 
-/* === Global mobile-friendly defaults === */
-* {
-  box-sizing: border-box;
-  max-width: 100%;
-}
-
-/* === Flex-wrap for containers that had horizontal layout === */
-main, .post, #statuscafe {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap; /* allows content to wrap instead of overlapping */
-}
