@@ -1,4 +1,4 @@
-/* === 2ちゃんねる-inspired CSS (Responsive, shrinkable) === */
+/* === 2ちゃんねる-inspired CSS (Responsive, no overlapping) === */
 
 /* === Font embedding === */
 @font-face {
@@ -23,7 +23,6 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  min-width: 0; /* allows shrinking */
 }
 
 /* Header */
@@ -35,7 +34,8 @@ header {
   font-weight: bold;
   text-align: center;
   font-size: clamp(14px, 2vw, 18px);
-  flex-shrink: 0;
+  position: relative;
+  z-index: auto;
 }
 
 /* Main content container */
@@ -61,6 +61,8 @@ main {
   flex-direction: column;
   flex-shrink: 1;
   min-width: 0;
+  position: relative;
+  z-index: auto;
 }
 
 .post .title {
@@ -90,6 +92,9 @@ img {
   border: 1px solid #ccc;
   display: block;
   flex-shrink: 1;
+  min-width: 0;
+  position: relative;
+  z-index: auto;
 }
 
 /* Links */
@@ -107,7 +112,8 @@ footer {
   font-size: 0.8rem;
   color: #555;
   margin: 2rem 0 1rem;
-  flex-shrink: 0;
+  position: relative;
+  z-index: auto;
 }
 
 /* Base text styling */
@@ -142,6 +148,8 @@ pre {
   overflow-x: auto;
   flex-shrink: 1;
   min-width: 0;
+  position: relative;
+  z-index: auto;
 }
 
 /* Iframe styling */
@@ -159,6 +167,8 @@ iframe {
   scrollbar-color: #89CFF0 #ffffff;
   flex-shrink: 1;
   min-width: 0;
+  position: relative;
+  z-index: auto;
 }
 
 /* Webkit scrollbars */
@@ -178,6 +188,8 @@ hr {
   background: url('./8f42a18e.gif') repeat-x center;
   margin: 1rem 0;
   flex-shrink: 0;
+  position: relative;
+  z-index: auto;
 }
 
 /* StatusCafe widget */
@@ -190,6 +202,8 @@ hr {
   flex-shrink: 1;
   min-width: 0;
   margin-top: 1rem;
+  position: relative;
+  z-index: auto;
 }
 
 /* === Responsive tweaks === */
@@ -197,41 +211,22 @@ hr {
   body { font-size: 13px; }
   header { font-size: 1rem; padding: 0.5rem; }
   main { padding: 0 0.5rem; }
-  iframe { height: 50vh; }
+  img, iframe { width: 100%; height: auto; flex-shrink: 1; }
 }
 
 @media (max-width: 480px) {
   body { font-size: 12px; }
   header { font-size: 0.9rem; }
-  iframe { height: 40vh; }
-  img { margin-top: 0.3rem; }
+  main { padding: 0 0.3rem; }
   .post { padding: 0.3rem 0; }
-}
-/* === Responsive images and iframes === */
-img, iframe {
-  max-width: 100%;       /* scale down if container shrinks */
-  height: auto;          /* maintain aspect ratio */
-  display: block;        /* stay in document flow */
-  flex-shrink: 1;        /* allow shrinking in flex containers */
-  min-width: 0;          /* prevent overflow inside flex */
-  margin: 0.5rem 0;      /* consistent spacing */
+  img, iframe { width: 100%; height: auto; margin: 0.2rem 0; }
 }
 
-/* Extra for small screens */
-@media (max-width: 768px) {
-  img, iframe {
-    width: 100%;         /* fill container width */
-    height: auto;        /* maintain aspect ratio */
-    margin: 0.3rem 0;    /* slightly smaller spacing */
-  }
+/* === Global mobile-friendly defaults === */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  z-index: auto;       /* remove conflicts */
+  position: relative;  /* keep elements in flow */
+  min-width: 0;        /* allow shrinking */
 }
-
-@media (max-width: 480px) {
-  img, iframe {
-    width: 100%;         /* full width on tiny screens */
-    height: auto;
-    margin: 0.2rem 0;    /* keep compact spacing */
-  }
-}
-
-
