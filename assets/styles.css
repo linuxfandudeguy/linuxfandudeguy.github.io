@@ -191,47 +191,50 @@ hr {
   img { margin-top: 0.3rem; }
   .post { padding: 0.3rem 0; }
 }
-/* === Fix overlap & enforce flow === */
+/* === Layout fixes to keep everything in one flow === */
 
-/* Global defaults */
+/* Make sure everything stays in normal document flow */
+body, header, main, footer, div, section, article {
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both; /* stop float overlaps */
+}
+
+/* Prevent overlap from flex/absolute children */
 * {
   box-sizing: border-box;
   max-width: 100%;
 }
 
-/* Make all major layout elements block-level */
-header, main, footer, section, article, aside, div {
-  display: block;
-  width: 100%;
-  clear: both; /* prevents floating overlap */
-}
-
-/* Posts should always stack */
-.post {
-  display: block;
-  width: 100%;
-  padding: 0.5rem 0;
-  border-bottom: 1px dotted #aaa;
-  word-wrap: break-word;
-  overflow: hidden; /* keeps inner stuff from spilling */
-}
-
-/* Images, iframes, and media should never overlap text */
+/* Images, iframes, videos stack cleanly */
 img, video, iframe {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 0.5rem auto;
-  clear: both;
+  position: relative;
+  z-index: 1;
 }
 
-/* Paragraphs and headings should not collapse on each other */
-p, h1, h2, h3, h4, h5, h6 {
+/* Fix posts stacking */
+.post {
+  position: relative;
+  background: white; /* optional: makes sure it covers bg images */
+  z-index: 1;
+}
+
+/* Ensure header/footer always on top of background */
+header, footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* If using absolutely positioned widgets (like statuscafe), 
+   force them to flow instead of floating */
+#statuscafe {
+  position: relative;
   display: block;
-  width: 100%;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  word-break: break-word;
+  clear: both;
+  margin-top: 1rem;
 }
-
 
