@@ -25,7 +25,7 @@
 			a:link { color: lightblue; }
 		}
 		header {
-			background: url('***dark mode banner image***');
+			background: url('assets/05abfcb6ab1be41f973408e218e878ad.jpg');
 		}
 	}
 /* end dark mode styling */
@@ -193,6 +193,7 @@ a:hover, a:focus {
 a:visited {
 	color: var(--accent);
 }
+
 
 
 
