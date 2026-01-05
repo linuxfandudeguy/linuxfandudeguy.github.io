@@ -8,7 +8,7 @@
 		--gradientBottom: rgb(240, 248, 255, .8);
 	}
 	header {
-		background: url('assets/4dc52efcf359ee5c69a6db8e48e3f596.jpg');
+		background: url('assets/05abfcb6ab1be41f973408e218e878ad.jpg');
 	}
 /* end light mode styling */
 
@@ -193,6 +193,7 @@ a:hover, a:focus {
 a:visited {
 	color: var(--accent);
 }
+
 
 
 
