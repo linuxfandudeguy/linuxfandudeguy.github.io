@@ -8,7 +8,7 @@
 		--gradientBottom: rgb(240, 248, 255, .8);
 	}
 	header {
-		background: url('***light mode banner image***');
+		background: url('assets/4dc52efcf359ee5c69a6db8e48e3f596.jpg');
 	}
 /* end light mode styling */
 
@@ -193,5 +193,6 @@ a:hover, a:focus {
 a:visited {
 	color: var(--accent);
 }
+
 
 
