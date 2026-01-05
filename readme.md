@@ -1,3 +1,3 @@
-# Free to use HTML/CSS layouts
-
-[See an overview + live previews of each layout on my website.](https://ribo.zone/free/layouts/)
+# credit
+[ribo.zone layouts](https://ribo.zone/free/layouts/)
+fauqi amar hizbullah for foo.ng
