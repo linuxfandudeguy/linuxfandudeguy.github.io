@@ -164,7 +164,7 @@ h1::after {
 	display: block;
 	margin: 5px auto 0 auto;
 	width: 100%;
-	height: 12px; /* adjust height to match your image */
+	height: 12px; 
 	background: url('assets/tumblr_f9cffb3b0465beccf879fdb9eb99851b_0237507d_2048.png') no-repeat center;
 	background-size: contain;
 }
@@ -193,4 +193,5 @@ a:hover, a:focus {
 a:visited {
 	color: var(--accent);
 }
+
 
