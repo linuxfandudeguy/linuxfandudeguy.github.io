@@ -77,6 +77,10 @@ layout: null
 			<a href="https://piclog.blue/profile.php?id=535"><img src="https://piclog.blue/latest.php?id=535"></a>
 			<h1>my mood</h1>
 			<a href="https://www.imood.com/users/durokotte"><img src="https://moods.imood.com/display/uname-durokotte/trans-1/imood.gif" alt="The current mood of durokotte at www.imood.com" border="0"></a>
+			<h1>last listened</h1>
+         <div id="lastfm-info">
+         Loading Last.fm info...
+         </div>
 		</section>
 		
 		<section class="full">
@@ -102,9 +106,56 @@ layout: null
 <script src="https://electric-tenshi.nekoweb.org/vocaring/vocaring-variables.js" defer></script>
 <script src="https://electric-tenshi.nekoweb.org/vocaring/vocaring-widget.js" defer></script>
 <script src="https://status.cafe/current-status.js?name=lelbois" defer></script>
+<script>
+// last.fm script
+function unescapeHTML(str) {
+  const div = document.createElement('div');
+  div.innerHTML = str;
+  return div.textContent;
+}
 
+async function fetchLastFM() {
+  const container = document.getElementById('lastfm-info');
+  if (!container) return;
+
+  try {
+    const response = await fetch('https://linuxfandudeguyapi.netlify.app/.netlify/functions/lastfm');
+    if (!response.ok) throw new Error('Network response was not ok');
+
+    const data = await response.json();
+    const track = data.recenttracks.track[0] || {};
+
+    const artistName = track.artist ? track.artist['#text'] : 'N/A';
+    const trackName = track.name || 'N/A';
+    const trackUrl = track.url || '#';
+    const artistUrl = trackUrl.split('/_/')[0] || '#'; // artist URL
+    const albumName = track.album ? track.album['#text'] : 'N/A';
+    const imageUrl = (track.image || []).find(img => img.size === 'medium')?.['#text'] || '';
+
+    let html = '';
+    html += '&lt;p&gt;&lt;strong&gt;artist:&lt;/strong&gt; &lt;a href=&quot;' + artistUrl + '&quot; target=&quot;_blank&quot;&gt;' + artistName + '&lt;/a&gt;&lt;/p&gt;';
+    html += '&lt;p&gt;&lt;strong&gt;track:&lt;/strong&gt; &lt;a href=&quot;' + trackUrl + '&quot; target=&quot;_blank&quot;&gt;' + trackName + '&lt;/a&gt;&lt;/p&gt;';
+    html += '&lt;p&gt;&lt;strong&gt;album:&lt;/strong&gt; ' + albumName + '&lt;/p&gt;';
+    if (imageUrl) {
+      html += '&lt;img src=&quot;' + imageUrl + '&quot; alt=&quot;' + trackName + '&quot; /&gt;';
+    }
+
+    container.innerHTML = unescapeHTML(html);
+
+  } catch (err) {
+    container.innerHTML = unescapeHTML('&lt;p style=&quot;color:red;&quot;&gt;Error: ' + err.message + '&lt;/p&gt;');
+    console.error(err);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetchLastFM();
+  setInterval(fetchLastFM, 2000);
+});
+</script>
 </body>
 </html>
+
 
 
 
