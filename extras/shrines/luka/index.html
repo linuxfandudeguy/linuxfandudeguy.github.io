@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>巡音ルカ様はまさに女神</title>
+<meta name="description" content="Megurine Luka is the best!!!!!!!!!!!!!!!!">
+<style>
+/* ------------------- LIGHT MODE ------------------- */
+:root {
+    --text: darkslategrey;
+    --border: lightpink;
+    --accent: hotpink;
+    --bg: #ffe6f0;
+    --gradientTop: #fff0f8;
+    --gradientBottom: rgba(255, 192, 203, 0.8);
+}
+
+header {
+    background: url('https://64.media.tumblr.com/419d54ee2987ba155c060161c8fa9c60/7557a7c3a83d860b-fc/s250x400/a0a27c597d245bcb8068a4aa42b3547206028df8.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+/* ------------------- DARK MODE ------------------- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: white;
+        --border: #b565a7;
+        --accent: #ff69b4;
+        --bg: rgba(128,0,64,0.8);
+        --gradientTop: #551a3b;
+        --gradientBottom: #a04080;
+    }
+    header { background: url('https://64.media.tumblr.com/419d54ee2987ba155c060161c8fa9c60/7557a7c3a83d860b-fc/s250x400/a0a27c597d245bcb8068a4aa42b3547206028df8.gif'); }
+    a:link { color: #ffb6c1; }
+}
+
+/* ------------------- GLOBAL STYLES ------------------- */
+* { box-sizing: border-box; }
+body {
+    padding: 10px;
+    font-family: 'MS PGothic', sans-serif;
+    color: var(--text);
+    background-color: var(--gradientTop);
+    background-image: 
+        linear-gradient(30deg, var(--bg) 12%, transparent 12.5%, transparent 87%, var(--bg) 87.5%, var(--bg)), 
+        linear-gradient(150deg, var(--bg) 12%, transparent 12.5%, transparent 87%, var(--bg) 87.5%, var(--bg)), 
+        linear-gradient(30deg, var(--bg) 12%, transparent 12.5%, transparent 87%, var(--bg) 87.5%, var(--bg)), 
+        linear-gradient(150deg, var(--bg) 12%, transparent 12.5%, transparent 87%, var(--bg) 87.5%, var(--bg)), 
+        linear-gradient(60deg, var(--bg) 25%, transparent 25.5%, transparent 75%, var(--bg) 75%, var(--bg)), 
+        linear-gradient(60deg, var(--bg) 25%, transparent 25.5%, transparent 75%, var(--bg) 75%, var(--bg));
+    background-size: 20px 35px;
+    background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    max-width: 55rem;
+    margin: 5vw auto 12px auto;
+    border: 6px ridge var(--border);
+    outline: 3px solid var(--gradientTop);
+    outline-offset: 4px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    gap: 5px;
+    background-color: var(--gradientBottom);
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, var(--gradientBottom) 9px),
+                      repeating-linear-gradient(var(--bg), var(--bg));
+}
+
+/* Column widths */
+.small { flex: 1 1 9%; }
+.large { flex: 1 1 82%; }
+.full  { flex: 1 1 100%; }
+.half  { flex: 1 1 49%; }
+
+/* Header */
+header {
+    width: 100%;
+    height: 120px;
+    border: 2px ridge var(--border);
+    border-radius: 5px;
+    position: relative;
+}
+header span {
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    margin: 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px var(--text),
+                 -1px 1px var(--text),
+                 1px -1px var(--accent),
+                 -1px -1px var(--accent);
+    color: var(--gradientTop);
+}
+
+/* Navigation */
+nav {
+    border: 2px ridge var(--border);
+    border-radius: 5px;
+    padding: 5px;
+    background: linear-gradient(var(--gradientTop), var(--gradientBottom));
+    text-align: center;
+}
+nav a {
+    display: inline-block;
+    margin: 5px;
+    background: linear-gradient(to right, var(--bg), var(--gradientBottom));
+    border-radius: 5px;
+    padding: 2px 7px;
+    text-decoration: none;
+    color: var(--text);
+}
+nav a:hover, nav a:focus {
+    background: linear-gradient(to right, var(--bg), var(--gradientBottom), var(--gradientTop));
+}
+
+/* Sections */
+section {
+    border: 2px ridge var(--border);
+    border-radius: 5px;
+    background: linear-gradient(var(--gradientTop), var(--gradientBottom));
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-bottom: 5vw;
+    font-size: 0.8rem;
+}
+footer a { text-decoration: none; }
+
+/* Headings */
+h1, h2, h3, h4, p { margin: 5px; line-height: 1.2; }
+h1 { font-size: 1.4rem; letter-spacing: 2px; text-align: center; border-bottom: 2px ridge var(--border); padding-bottom: 5px; }
+h1::after { content: ""; display: block; margin: 5px auto 0 auto; width: 100%; height: 12px; background: url('assets/tumblr_f9cffb3b0465beccf879fdb9eb99851b_0237507d_2048.png') no-repeat center; background-size: contain; }
+h2 { font-size: 1.25rem; text-align: center; }
+
+/* Images */
+img { max-width: 100%; }
+
+/* Blinkies */
+.blinkie { display: inline-block; margin: 5px; animation: blink 1s infinite; }
+@keyframes blink { 0%,100% {opacity:1;} 50% {opacity:0.2;} }
+
+/* Marquee */
+.marquee { overflow: hidden; position: relative; width: 100%; background: var(--gradientBottom); padding: 5px; border: 1px dashed var(--accent); margin-bottom: 10px; }
+.marquee-content { display: inline-block; white-space: nowrap; animation: marquee 10s linear infinite; }
+@keyframes marquee { 0% { transform: translateX(100%);} 100% { transform: translateX(-100%);} }
+.marquee-content {
+    display: inline-flex; /* changed from inline-block to inline-flex for horizontal layout */
+    gap: 2rem;           /* space between items */
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+}
+
+.marquee-content p {
+    display: inline-block; /* make each paragraph inline */
+    margin: 0;             /* remove default margins */
+}
+
+/* Text styling */
+a:hover, a:focus { font-style: italic; }
+a:visited { color: var(--accent); }
+
+</style>
+</head>
+<body>
+<div id="header">
+<header>
+    <span>巡音ルカ</span>
+</header>
+
+</div>
+
+<main class="container">
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-content">
+<p>♪ﾙｶﾙｶ★ﾅｲﾄﾌｨｰﾊﾞｰ♪</p>
+<p>Did you know Luka was the first bilingual voicebank, being able to speak both Japanese and English?</p>
+</div>
+    </div>
+
+   
+
+    <!-- Gallery -->
+    <section class="full">
+        <h2>Gallery</h2>
+        <img src="https://luka-image-placeholder.com/200" alt="Megurine Luka placeholder">
+        <img src="https://luka-image-placeholder.com/200" alt="Megurine Luka placeholder">
+        <img src="https://luka-image-placeholder.com/200" alt="Megurine Luka placeholder">
+    </section>
+
+    <!-- Blinkies -->
+    <section class="full">
+        <h2>Blinkies & Buttons</h2>
+        <img class="blinkie" src="https://via.placeholder.com/88x31.png?text=Luka" alt="Luka blinkie">
+        <img class="blinkie" src="https://via.placeholder.com/88x31.png?text=Shrine" alt="Shrine blinkie">
+        <img class="blinkie" src="https://via.placeholder.com/88x31.png?text=Fan" alt="Fan blinkie">
+    </section>
+
+
+    <!-- Message -->
+    <section class="full">
+        <h2>lariat</h2>
+        <p style="text-align:center; font-weight:bold; font-size:1.2rem;">All shall bow to Double Lariat</p>
+        <p style="text-align:center; font-weight:bold; font-size:1.2rem;">ダブルラリアットに皆、ひざまずけ</p>
+    </section>
+
+    <section class="full">
+        <h2>credit</h2>
+<a href="https://www.tumblr.com/hymnis/780361959151435776/m-luka-tumblr-layout">hymnis on tumblr</a>
+    </section>
+
+</body>
+<footer>
+2026 | made with a laptop and a unhealthy obsession with luka 
+</footer>
+</html>
+
