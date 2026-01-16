@@ -96,8 +96,15 @@ layout: null
 		</section>
 		
 		<section class="half">
-			<h2>half width section</h2>
-		</section>
+  <p><strong>{{ site.github.build_revision | slice:0,7 }}</strong></p>
+
+    <!-- Commit date -->
+    <p style="color:#555; font-size:0.8em;">
+      on {{ site.github.build_time | date: "%-m/%-d/%Y, %-I:%M:%S %p" }}
+    </p>
+
+    <!-- Commit message -->
+    <p>{{ site.github.build_message }}</p>		</section>
 		
 		<section class="half">
          <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div>		
@@ -161,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+
 
 
 
