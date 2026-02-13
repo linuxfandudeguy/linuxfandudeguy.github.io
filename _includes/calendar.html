@@ -1,0 +1,86 @@
+{% raw %}
+<div class="calendar">
+  <div class="calendar-header">
+    <h2 id="monthYear"></h2>
+  </div>
+  <div class="calendar-days">
+    <div>日</div><div>月</div><div>火</div><div>水</div>
+    <div>木</div><div>金</div><div>土</div>
+  </div>
+  <div class="calendar-dates" id="calendarDates"></div>
+</div>
+
+<style>
+  .calendar {
+    display: inline-block;
+    font-family: inherit;
+    color: inherit;
+  }
+
+  .calendar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5em;
+  }
+
+  .calendar-days, .calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+  }
+
+  .calendar-dates div {
+    padding: 0.5em;
+  }
+
+  .today {
+    background-color: #f90;
+    color: white;
+    border-radius: 50%;
+  }
+</style>
+
+<script>
+  const monthYearLabel = document.getElementById("monthYear");
+  const calendarDates = document.getElementById("calendarDates");
+
+  const today = new Date();
+  const currentMonth = today.getMonth();
+  const currentYear = today.getFullYear();
+  const todayDate = today.getDate();
+
+  function isLeapYear(year) {
+    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+  }
+
+  function getDaysInMonth(month, year) {
+    const days = [31, isLeapYear(year) ? 29 : 28, 31, 30, 31, 30,
+                  31, 31, 30, 31, 30, 31];
+    return days[month];
+  }
+
+  function renderCalendar(month, year) {
+    calendarDates.innerHTML = "";
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = getDaysInMonth(month, year);
+
+    for (let i = 0; i < firstDay; i++) {
+      calendarDates.appendChild(document.createElement("div"));
+    }
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      const dateDiv = document.createElement("div");
+      dateDiv.textContent = day;
+      if (day === todayDate && month === currentMonth && year === currentYear) {
+        dateDiv.classList.add("today");
+      }
+      calendarDates.appendChild(dateDiv);
+    }
+
+    monthYearLabel.textContent = `${year}年 ${month + 1}月`;
+  }
+
+  renderCalendar(currentMonth, currentYear);
+</script>
+{% endraw %}
