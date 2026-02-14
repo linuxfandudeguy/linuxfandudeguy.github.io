@@ -50,7 +50,25 @@ layout: null
 		
 		<section class="half">
 			<h1>welcome (or not) to my homepage!</h1>
-			<img alt="aro" src="assets/aromantic.png"/></a>
+<style>
+  .stamps-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .stamps-row img {
+    max-width: 100%;
+    height: auto;              /* allows natural scaling */
+    image-rendering: pixelated; /* remove if not pixel art */
+  }
+</style>
+
+<div class="stamps-row">
+  <img src="assets/aromantic.png" alt="aro stamp">
+  <img src="assets/gasleak.png" alt="gas leak stamp">
+</div>
 			<p>i am a dev that loves docker and rust!!!</p>
 			<p>pronouns: he/him or they/them </p>
 <p>
@@ -292,6 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+
 
 
 
