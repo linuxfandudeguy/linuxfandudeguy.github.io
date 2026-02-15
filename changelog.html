@@ -1,0 +1,82 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>changelog</title>
+<link href="cyanobacteria.css?v={{ site.time | date: '%s' }}" rel="stylesheet" type="text/css" media="all">
+<link rel="icon" type="image/png" href="{{ '/assets/tumblr_c0af9a08ea12a0b7f6ccafb9f3723ad4_0ad6540d_100.ico.png' | relative_url }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  article { margin-bottom: 1.5rem; padding: 1rem; background: #fff; border-radius: 8px; box-shadow: 0 1px 4px; }
+  h3 { margin: 0 0 0.3rem 0; word-break: break-word; }
+  time { display: block; margin-bottom: 0.5rem; font-size: 0.85rem; }
+
+</style>
+</head>
+
+<body>
+  <header>
+    <h1>changelog</h1>
+  </header>
+
+  <main>
+    <div id="feed">			 <img src="assets/email_btn.gif" alt="loading">
+Loading...</div>
+  </main>
+
+  <script>
+    (async () => {
+      // add a timestamp to bust cache
+      const url = 'https://durokotte.foo.ng/changelog.xml?t=' + Date.now();
+      const container = document.getElementById('feed');
+      container.textContent = ''; // clear loading text
+
+      const MAX_DESC_LENGTH = 200;
+
+      try {
+        const res = await fetch(url, { cache: 'no-store' }); // extra no-store for safety
+        const xmlText = await res.text();
+        const xml = new DOMParser().parseFromString(xmlText, "text/xml");
+        const items = xml.querySelectorAll("item");
+
+        if (items.length === 0) {
+          container.textContent = "No changelog entries found.";
+          return;
+        }
+
+        items.forEach(item => {
+          const article = document.createElement("article");
+
+          const h3 = document.createElement("h3");
+          const a = document.createElement("a");
+          a.href = item.querySelector("link")?.textContent ?? "#";
+          a.target = "_blank";
+          a.textContent = item.querySelector("title")?.textContent ?? "(no title)";
+          h3.appendChild(a);
+
+          const time = document.createElement("time");
+          time.textContent = item.querySelector("pubDate")?.textContent ?? "";
+
+          const p = document.createElement("p");
+          let desc = item.querySelector("description")?.textContent ?? "";
+          if(desc.length > MAX_DESC_LENGTH) {
+            desc = desc.slice(0, MAX_DESC_LENGTH) + "…";
+          }
+          p.textContent = desc;
+
+          article.append(h3, time, p);
+          container.appendChild(article);
+        });
+      } catch (err) {
+        container.textContent = "Failed to load changelog.";
+        console.error(err);
+      }
+    })();
+  </script>
+</body>
+</html>
