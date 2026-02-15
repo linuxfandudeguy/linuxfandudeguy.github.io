@@ -288,7 +288,17 @@ async function fetchLastFM() {
     const trackUrl = track.url || '#';
     const artistUrl = trackUrl.split('/_/')[0] || '#'; // artist URL
     const albumName = track.album ? track.album['#text'] : 'N/A';
-    const imageUrl = (track.image || []).find(img => img.size === 'medium')?.['#text'] || '';
+
+    // Try small, medium, large in order
+    const sizes = ['small', 'medium', 'large'];
+    let imageUrl = '';
+    for (const size of sizes) {
+      const img = (track.image || []).find(i => i.size === size);
+      if (img && img['#text']) {
+        imageUrl = img['#text'];
+        break;
+      }
+    }
 
     let html = '';
     html += '&lt;p&gt;&lt;strong&gt;artist:&lt;/strong&gt; &lt;a href=&quot;' + artistUrl + '&quot; target=&quot;_blank&quot;&gt;' + artistName + '&lt;/a&gt;&lt;/p&gt;';
@@ -311,8 +321,10 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(fetchLastFM, 3000);
 });
 </script>
+
 </body>
 </html>
+
 
 
 
