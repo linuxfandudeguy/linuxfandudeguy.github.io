@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Tue, 17 Feb 2026 23:20:30 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Feb 2026 23:23:07 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[change the imgur link to self hosted]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/f6ce1ac0912206d73ecc7b31daecade56febf14c</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/f6ce1ac0912206d73ecc7b31daecade56febf14c</guid>
+      <pubDate>Tue, 17 Feb 2026 18:22:59 -0500</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[chore: update changelog RSS]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/8a35666139c60b37c601c78c0e42115a5cb67084</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/8a35666139c60b37c601c78c0e42115a5cb67084</guid>
+      <pubDate>Tue, 17 Feb 2026 23:20:30 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[Add files via upload]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/edda8b438701defcc7c0edb28907ec0706e86148</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/0859c699e4726b8aa12605b90fe4ed841eb45b5d</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/0859c699e4726b8aa12605b90fe4ed841eb45b5d</guid>
       <pubDate>Sun, 15 Feb 2026 16:02:45 -0500</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[chore: update changelog RSS]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/60a35b90cbd2c540cd1e957f3987d4e6f5a3924a</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/60a35b90cbd2c540cd1e957f3987d4e6f5a3924a</guid>
-      <pubDate>Sun, 15 Feb 2026 21:02:00 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Update changelog.html]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/91e59e0e04ec52eb38ac40f9f6b03da36bdc2d7b</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/91e59e0e04ec52eb38ac40f9f6b03da36bdc2d7b</guid>
-      <pubDate>Sun, 15 Feb 2026 16:01:52 -0500</pubDate>
     </item>
   </channel>
 </rss>
