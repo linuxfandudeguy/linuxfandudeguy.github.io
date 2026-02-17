@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Sun, 15 Feb 2026 21:32:45 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Feb 2026 23:15:10 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Update cyanobacteria.css]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/f4a23c3b4d2b819e2fb1b1413b8d77670d6f95b9</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/f4a23c3b4d2b819e2fb1b1413b8d77670d6f95b9</guid>
+      <pubDate>Tue, 17 Feb 2026 18:15:02 -0500</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[chore: update changelog RSS]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/76e51b59499509ab5f83cfc08da5bd777743f21b</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/76e51b59499509ab5f83cfc08da5bd777743f21b</guid>
+      <pubDate>Sun, 15 Feb 2026 21:32:45 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[test all image sizes and use the one that works]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/6ae30ee8b8ff75ebf3069a8a00096f15237bd6de</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/013c2283c82247ef1c1c9da771d94423096a778c</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/013c2283c82247ef1c1c9da771d94423096a778c</guid>
       <pubDate>Sun, 15 Feb 2026 16:01:31 -0500</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[chore: update changelog RSS]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/83d5e82edb37394cdcb8ccb0e73c35e96f43480e</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/83d5e82edb37394cdcb8ccb0e73c35e96f43480e</guid>
-      <pubDate>Sun, 15 Feb 2026 20:59:47 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Update changelog.html]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/0a6b8c52e27a056251f68436e9ab9c4a10a5b34f</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/0a6b8c52e27a056251f68436e9ab9c4a10a5b34f</guid>
-      <pubDate>Sun, 15 Feb 2026 15:59:40 -0500</pubDate>
     </item>
   </channel>
 </rss>
