@@ -40,13 +40,13 @@
 
 ::-webkit-scrollbar-thumb:vertical {
   background:
-    url("https://i.imgur.com/bfyvjnx.png") no-repeat 50%,
+    url("assets/bfyvjnx.png") no-repeat 50%,
     linear-gradient(90deg, #eee 45%, #ddd 0, #bbb);
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
   background:
-    url("https://i.imgur.com/tqe4SxM.png") no-repeat 50%,
+    url("assets/tqe4SxM.png") no-repeat 50%,
     linear-gradient(180deg, #eee 45%, #ddd 0, #bbb);
 }
 
@@ -67,7 +67,7 @@
 }
 
 ::-webkit-scrollbar-button:vertical:end:increment {
-  background: white url("https://i.imgur.com/xuIt6Lc.png") no-repeat center;
+  background: white url("assets/xuIt6Lc.png") no-repeat center;
   background-size: cover;
 }
 
@@ -328,4 +328,5 @@ a:focus {
 a:visited {
   color: var(--accent);
 }
+
 
