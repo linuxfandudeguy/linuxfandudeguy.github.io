@@ -1,6 +1,86 @@
 /* =========================
+   CUSTOM SCROLLBAR
+   ========================= */
+
+#container {
+  overflow: auto;
+  overflow-x: hidden;
+  height: 10em;
+  padding: 1rem;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 17px;
+}
+
+::-webkit-scrollbar-corner {
+  background: #eee;
+}
+
+::-webkit-scrollbar-track:vertical {
+  background: linear-gradient(90deg, #e5e5e5, #f0f0f0 20%);
+}
+
+::-webkit-scrollbar-track:horizontal {
+  background: linear-gradient(180deg, #e5e5e5, #f0f0f0 20%);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 1.5px solid #888;
+  border-radius: 3px;
+  box-shadow:
+    inset 0 -1px 1px #fff,
+    inset 0 1px 1px #fff;
+  background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background:
+    url("https://i.imgur.com/bfyvjnx.png") no-repeat 50%,
+    linear-gradient(90deg, #eee 45%, #ddd 0, #bbb);
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background:
+    url("https://i.imgur.com/tqe4SxM.png") no-repeat 50%,
+    linear-gradient(180deg, #eee 45%, #ddd 0, #bbb);
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment,
+::-webkit-scrollbar-button:horizontal:start:decrement,
+::-webkit-scrollbar-button:vertical:end:increment,
+::-webkit-scrollbar-button:vertical:start:decrement {
+  display: block;
+}
+
+::-webkit-scrollbar-button:vertical {
+  height: 17px;
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+  background: white url("https://i.imgur.com/EFnEMEb.png") no-repeat center;
+  background-size: cover;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+  background: white url("https://i.imgur.com/xuIt6Lc.png") no-repeat center;
+  background-size: cover;
+}
+
+/* Hide unused buttons */
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement {
+  display: none;
+}
+
+/* =========================
    LIGHT MODE VARIABLES
    ========================= */
+
 :root {
   --text: darkslategrey;
   --border: lightgrey;
@@ -13,6 +93,7 @@
 /* =========================
    DARK MODE VARIABLES
    ========================= */
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text: white;
@@ -31,9 +112,14 @@
 /* =========================
    GLOBAL RESET
    ========================= */
+
 * {
   box-sizing: border-box;
 }
+
+/* =========================
+   BODY / BACKGROUND
+   ========================= */
 
 body {
   padding: 10px;
@@ -55,6 +141,7 @@ body {
 /* =========================
    LAYOUT
    ========================= */
+
 .container {
   max-width: 55rem;
   margin: 5vw auto 12px;
@@ -81,8 +168,9 @@ body {
 .half  { flex: 1 1 49%; }
 
 /* =========================
-   HEADER / BANNER
+   HEADER
    ========================= */
+
 header {
   width: 100%;
   height: 120px;
@@ -91,9 +179,7 @@ header {
   border: 2px ridge var(--border);
   border-radius: 5px;
 
-  background: url('assets/05abfcb6ab1be41f973408e218e878ad.jpg');
-  background-size: cover;
-  background-position: center;
+  background: url('assets/05abfcb6ab1be41f973408e218e878ad.jpg') center / cover;
 }
 
 header span {
@@ -116,6 +202,7 @@ header span {
 /* =========================
    NAVIGATION
    ========================= */
+
 nav {
   padding: 5px;
   border: 2px ridge var(--border);
@@ -133,7 +220,6 @@ nav a {
   display: block;
   margin: 5px;
   padding: 2px 7px;
-
   text-decoration: none;
   border-radius: 5px;
   background: linear-gradient(to right, var(--bg), var(--gradientBottom));
@@ -152,6 +238,7 @@ nav a:focus {
 /* =========================
    IMAGES
    ========================= */
+
 div.small > img {
   display: block;
   margin: 5px auto;
@@ -166,6 +253,7 @@ img {
 /* =========================
    CONTENT
    ========================= */
+
 section {
   padding: 5px;
   border: 2px ridge var(--border);
@@ -186,6 +274,7 @@ footer a {
 /* =========================
    TYPOGRAPHY
    ========================= */
+
 h1, h2, h3, h4, h5, h6, p {
   margin: 5px;
   line-height: 1.2;
@@ -196,22 +285,17 @@ h1 {
   letter-spacing: 2px;
   font-weight: normal;
   text-align: center;
-
   padding-bottom: 6px;
   border-bottom: 2px ridge var(--border);
 }
 
-/* === BAR CAT DIVIDER (ENLARGED) === */
 h1::after {
   content: "";
   display: block;
-
   margin: 8px auto 0;
   width: 100%;
   height: 36px;
-
-  background: url('assets/bar-cat.gif') repeat-x center;
-  background-size: auto 100%;
+  background: url('assets/bar-cat.gif') repeat-x center / auto 100%;
 }
 
 h2 {
@@ -220,9 +304,7 @@ h2 {
   text-align: center;
 }
 
-h3 {
-  font-size: 1.1rem;
-}
+h3 { font-size: 1.1rem; }
 
 h4 {
   font-size: 1rem;
@@ -233,6 +315,7 @@ h4 {
 /* =========================
    MISC
    ========================= */
+
 pre {
   overflow-x: auto;
 }
