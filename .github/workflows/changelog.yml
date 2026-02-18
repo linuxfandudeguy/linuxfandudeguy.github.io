@@ -22,7 +22,7 @@ jobs:
         run: |
           REPO_URL="https://github.com/${GITHUB_REPOSITORY}"
           NOW=$(date -R)
-          NUM_COMMITS=10   # adjust this to however many recent commits you want
+          NUM_COMMITS=10   # number of visible commits in RSS
 
           cat > changelog.xml <<EOF
           <?xml version="1.0" encoding="UTF-8"?>
@@ -34,7 +34,14 @@ jobs:
               <lastBuildDate>$NOW</lastBuildDate>
           EOF
 
-          git log --no-merges -n $NUM_COMMITS --pretty=format:'%H|%s|%cD' | while IFS='|' read hash subject date; do
+          git log main \
+            --no-merges \
+            --invert-grep \
+            --author='github-actions' \
+            --grep='^chore: update changelog RSS$' \
+            --pretty=format:'%H|%s|%cD' |
+          head -n $NUM_COMMITS |
+          while IFS='|' read hash subject date; do
             cat >> changelog.xml <<EOF
               <item>
                 <title><![CDATA[$subject]]></title>
@@ -57,4 +64,3 @@ jobs:
           git add changelog.xml
           git commit -m "chore: update changelog RSS" || exit 0
           git push
-
