@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Tue, 17 Feb 2026 23:25:53 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Feb 2026 01:55:56 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[make comment less awkward]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/722e47966134858bb81fa55ef469de518d9eb11d</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/722e47966134858bb81fa55ef469de518d9eb11d</guid>
+      <pubDate>Tue, 17 Feb 2026 20:55:48 -0500</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[chore: update changelog RSS]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c79fcc307801635f111567b3baef918303f6fad7</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c79fcc307801635f111567b3baef918303f6fad7</guid>
+      <pubDate>Tue, 17 Feb 2026 23:25:53 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[change all of the other ones]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c019c85a0266d11b8544badb1b3846f6082caefb</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/f4a23c3b4d2b819e2fb1b1413b8d77670d6f95b9</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/f4a23c3b4d2b819e2fb1b1413b8d77670d6f95b9</guid>
       <pubDate>Tue, 17 Feb 2026 18:15:02 -0500</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[chore: update changelog RSS]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/76e51b59499509ab5f83cfc08da5bd777743f21b</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/76e51b59499509ab5f83cfc08da5bd777743f21b</guid>
-      <pubDate>Sun, 15 Feb 2026 21:32:45 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[test all image sizes and use the one that works]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/6ae30ee8b8ff75ebf3069a8a00096f15237bd6de</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/6ae30ee8b8ff75ebf3069a8a00096f15237bd6de</guid>
-      <pubDate>Sun, 15 Feb 2026 16:32:37 -0500</pubDate>
     </item>
   </channel>
 </rss>
