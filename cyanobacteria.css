@@ -1,7 +1,12 @@
-/* =========================
-  new: CUSTOM SCROLLBAR
-   ========================= */
 
+
+@font-face {
+  font-family: "font";
+  src: url("assets/MS PGothic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 #container {
   overflow: auto;
   overflow-x: hidden;
@@ -123,7 +128,7 @@
 
 body {
   padding: 10px;
-  font-family: 'MS PGothic', sans-serif;
+  font-family: 'font', sans-serif;
   color: var(--text);
 
   background-color: var(--gradientTop);
@@ -328,6 +333,7 @@ a:focus {
 a:visited {
   color: var(--accent);
 }
+
 
 
 
