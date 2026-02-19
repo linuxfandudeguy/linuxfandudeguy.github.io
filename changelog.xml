@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Thu, 19 Feb 2026 21:26:56 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Feb 2026 21:29:44 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Delete assets/ms-pgothic-regular.ttf]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/39c4d1ab1e8bbacd636030edd99c7a0851bf7276</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/39c4d1ab1e8bbacd636030edd99c7a0851bf7276</guid>
+      <pubDate>Thu, 19 Feb 2026 16:29:35 -0500</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c8cff899782af9cbc16d742db3a9502982f4687a</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c8cff899782af9cbc16d742db3a9502982f4687a</guid>
+      <pubDate>Thu, 19 Feb 2026 21:26:56 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[why the hell is the daMN FONT NOT LOADINGGGGGGGGGGGGGGGGGGGGGG]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7a5368ff1fbc09b4bfbc587c52ff3e5045a78068</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/d7477b161f952fc440d36a6bf764c013cb6d08bd</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/d7477b161f952fc440d36a6bf764c013cb6d08bd</guid>
       <pubDate>Thu, 19 Feb 2026 16:22:04 -0500</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/19743de464df7825ea0c832d6fde1d1836438092</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/19743de464df7825ea0c832d6fde1d1836438092</guid>
-      <pubDate>Thu, 19 Feb 2026 21:20:46 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Add files via upload]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/289860bff0025e8bebc05a37cff38f439c208d4a</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/289860bff0025e8bebc05a37cff38f439c208d4a</guid>
-      <pubDate>Thu, 19 Feb 2026 16:20:35 -0500</pubDate>
     </item>
   </channel>
 </rss>
