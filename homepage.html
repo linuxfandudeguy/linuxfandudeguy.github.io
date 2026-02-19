@@ -12,6 +12,111 @@ layout: null
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 </head>
+	<!-- ===== Real Resource-Based Page Loader ===== -->
+<div id="page-loader">
+  <div id="loader-content">
+    <div id="loader-bar-container">
+      <div id="loader-bar"></div>
+    </div>
+    <div id="loader-text">0%</div>
+  </div>
+</div>
+
+<style>
+  #page-loader {
+    position: fixed;
+    inset: 0;
+    background: inherit;
+    color: inherit;
+    font: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+  }
+
+  #loader-content {
+    width: min(400px, 80%);
+    text-align: center;
+  }
+
+  #loader-bar-container {
+    width: 100%;
+    height: 0.5em;
+    border: 1px solid currentColor;
+    margin-bottom: 0.75em;
+    overflow: hidden;
+  }
+
+  #loader-bar {
+    height: 100%;
+    width: 0%;
+    background: currentColor;
+    transition: width 0.1s linear;
+  }
+
+  #page-loader.fade-out {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+</style>
+
+<script>
+(function() {
+  const bar = document.getElementById("loader-bar");
+  const text = document.getElementById("loader-text");
+  const loader = document.getElementById("page-loader");
+
+  let totalResources = 0;
+  let loadedResources = 0;
+
+  // Collect initial resource list
+  const entries = performance.getEntriesByType("resource");
+  totalResources = entries.length;
+
+  function updateProgress() {
+    if (totalResources === 0) return;
+
+    const percent = Math.min(
+      100,
+      Math.round((loadedResources / totalResources) * 100)
+    );
+
+    bar.style.width = percent + "%";
+    text.textContent = percent + "%";
+  }
+
+  // Observe new resource loads
+  const observer = new PerformanceObserver((list) => {
+    const newEntries = list.getEntries();
+    totalResources += newEntries.length;
+
+    newEntries.forEach(() => {
+      loadedResources++;
+      updateProgress();
+    });
+  });
+
+  observer.observe({ entryTypes: ["resource"] });
+
+  // Count already loaded resources
+  loadedResources = entries.length;
+  updateProgress();
+
+  window.addEventListener("load", () => {
+    bar.style.width = "100%";
+    text.textContent = "100%";
+
+    loader.classList.add("fade-out");
+
+    setTimeout(() => {
+      loader.remove();
+      observer.disconnect();
+    }, 400);
+  });
+})();
+</script>
+<!-- ===== End Loader ===== -->
 <body>
 
 	<div class="container">
@@ -328,6 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </body>
 </html>
+
 
 
 
