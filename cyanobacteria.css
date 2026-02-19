@@ -1,8 +1,8 @@
 
 
 @font-face {
-  font-family: "font";
-  src: url ("assets/Web437_NEC_APC3_8x16.woff") format("truetype");
+  font-family: "thisisafont";
+  src: url ("/assets/Web437_NEC_APC3_8x16.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -128,7 +128,7 @@
 
 body {
   padding: 10px;
-  font-family: 'font', sans-serif;
+  font-family: 'thisisafont', sans-serif;
   color: var(--text);
 
   background-color: var(--gradientTop);
@@ -333,6 +333,7 @@ a:focus {
 a:visited {
   color: var(--accent);
 }
+
 
 
 
