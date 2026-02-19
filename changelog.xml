@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Thu, 19 Feb 2026 02:14:24 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Feb 2026 02:15:07 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Update homepage.html]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/6b48bacd20f39eac6dac97f45601e6193dca3f9f</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/6b48bacd20f39eac6dac97f45601e6193dca3f9f</guid>
+      <pubDate>Wed, 18 Feb 2026 21:14:59 -0500</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/48804491e4269c333705df98ff5f40f525992b2d</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/48804491e4269c333705df98ff5f40f525992b2d</guid>
+      <pubDate>Thu, 19 Feb 2026 02:14:24 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[Add files via upload]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/9b4ce42cc743747d4266c8a35cf0806b9060c1d5</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/dd15e2cd9296662a5d906a4d621312822fd8e3de</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/dd15e2cd9296662a5d906a4d621312822fd8e3de</guid>
       <pubDate>Wed, 18 Feb 2026 20:27:09 -0500</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[chore: update changelog RSS]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/f3d1b26df61ee3d4859af84f5830cb86feec175d</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/f3d1b26df61ee3d4859af84f5830cb86feec175d</guid>
-      <pubDate>Thu, 19 Feb 2026 01:15:03 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Update author format in changelog workflow]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/5d246a265400a1ce311a1bdeecea86e6cf0b0df4</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/5d246a265400a1ce311a1bdeecea86e6cf0b0df4</guid>
-      <pubDate>Wed, 18 Feb 2026 20:14:55 -0500</pubDate>
     </item>
   </channel>
 </rss>
