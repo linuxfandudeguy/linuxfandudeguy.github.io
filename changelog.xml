@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Thu, 19 Feb 2026 21:32:50 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Feb 2026 21:34:36 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Restore original styles and variables in cyanobacteria.css]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7b16776d2714453f30b2e334b6e2529601f8b728</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7b16776d2714453f30b2e334b6e2529601f8b728</guid>
+      <pubDate>Thu, 19 Feb 2026 16:34:28 -0500</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/3beef369c91515ec1de24b0ec23d023b5e4bcc53</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/3beef369c91515ec1de24b0ec23d023b5e4bcc53</guid>
+      <pubDate>Thu, 19 Feb 2026 21:32:50 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[change to woff]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7fca19bf6069874bb996f685dddd0d18692a4ad3</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/39c4d1ab1e8bbacd636030edd99c7a0851bf7276</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/39c4d1ab1e8bbacd636030edd99c7a0851bf7276</guid>
       <pubDate>Thu, 19 Feb 2026 16:29:35 -0500</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c8cff899782af9cbc16d742db3a9502982f4687a</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c8cff899782af9cbc16d742db3a9502982f4687a</guid>
-      <pubDate>Thu, 19 Feb 2026 21:26:56 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[why the hell is the daMN FONT NOT LOADINGGGGGGGGGGGGGGGGGGGGGG]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7a5368ff1fbc09b4bfbc587c52ff3e5045a78068</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7a5368ff1fbc09b4bfbc587c52ff3e5045a78068</guid>
-      <pubDate>Thu, 19 Feb 2026 16:26:47 -0500</pubDate>
     </item>
   </channel>
 </rss>
