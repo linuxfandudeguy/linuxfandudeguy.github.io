@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "font";
-  src: url("assets/ms-pgothic-regular.ttf") format("truetype");
+  src: url ("assets/Web437_NEC_APC3_8x16.woff") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -333,6 +333,7 @@ a:focus {
 a:visited {
   color: var(--accent);
 }
+
 
 
 
