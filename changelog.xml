@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Thu, 19 Feb 2026 21:30:10 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Feb 2026 21:30:36 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Update cyanobacteria.css]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/b1eb67a067d73df20383517628e5099af69135a7</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/b1eb67a067d73df20383517628e5099af69135a7</guid>
+      <pubDate>Thu, 19 Feb 2026 16:30:27 -0500</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/484ed80965a1bfda915ad158bb71916f384bb165</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/484ed80965a1bfda915ad158bb71916f384bb165</guid>
+      <pubDate>Thu, 19 Feb 2026 21:30:10 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[change font]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/fc1620bf401fcc9cf7184e008d33673daff8b95a</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/edc88b6a40fb16ce3d63e880662f1049ee81afff</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/edc88b6a40fb16ce3d63e880662f1049ee81afff</guid>
       <pubDate>Thu, 19 Feb 2026 16:26:08 -0500</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/49bbadf88490755779e643a682145c967ec43c22</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/49bbadf88490755779e643a682145c967ec43c22</guid>
-      <pubDate>Thu, 19 Feb 2026 21:25:50 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Delete assets/MS PGothic.ttf]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/3f5cbfcf33d49aa48a60184ca78f773c0ac5249d</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/3f5cbfcf33d49aa48a60184ca78f773c0ac5249d</guid>
-      <pubDate>Thu, 19 Feb 2026 16:25:39 -0500</pubDate>
     </item>
   </channel>
 </rss>
