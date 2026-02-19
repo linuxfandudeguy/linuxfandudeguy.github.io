@@ -22,7 +22,9 @@ jobs:
         run: |
           REPO_URL="https://github.com/${GITHUB_REPOSITORY}"
           NOW=$(date -R)
-          NUM_COMMITS=10   # number of visible commits in RSS
+          NUM_COMMITS=10
+
+          BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
           cat > changelog.xml <<EOF
           <?xml version="1.0" encoding="UTF-8"?>
@@ -34,10 +36,10 @@ jobs:
               <lastBuildDate>$NOW</lastBuildDate>
           EOF
 
-          git log main \
+          git log "$BRANCH" \
             --no-merges \
+            --author='^linuxfandudeguy$' \
             --invert-grep \
-            --author='github-actions' \
             --grep='^chore: update changelog RSS$' \
             --pretty=format:'%H|%s|%cD' |
           head -n $NUM_COMMITS |
