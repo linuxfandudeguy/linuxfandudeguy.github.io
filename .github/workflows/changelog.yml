@@ -38,7 +38,7 @@ jobs:
 
           git log "$BRANCH" \
             --no-merges \
-            --author='^linuxfandudeguy$' \
+            --author='64905463\+linuxfandudeguy@users.noreply.github.com' \
             --invert-grep \
             --grep='^chore: update changelog RSS$' \
             --pretty=format:'%H|%s|%cD' |
