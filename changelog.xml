@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Sun, 22 Feb 2026 20:58:21 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Feb 2026 21:02:44 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Update effects.html]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/f56a1f984218cf525cc9b7dcdf7881ddea872e26</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/f56a1f984218cf525cc9b7dcdf7881ddea872e26</guid>
+      <pubDate>Sun, 22 Feb 2026 16:02:36 -0500</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/608ee078118ffe36a0d415fd1597fae2c87e711c</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/608ee078118ffe36a0d415fd1597fae2c87e711c</guid>
+      <pubDate>Sun, 22 Feb 2026 20:58:21 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[Update effects.html]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/37ef4b383e66f0972a0ae7b369e9182ced928531</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/6e2bfbfcffe46d096b812aa8d828af97a7af8836</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/6e2bfbfcffe46d096b812aa8d828af97a7af8836</guid>
       <pubDate>Sun, 22 Feb 2026 15:48:39 -0500</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/1117612db77b1bfd4a22db0814b258c006e3e69e</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/1117612db77b1bfd4a22db0814b258c006e3e69e</guid>
-      <pubDate>Sun, 22 Feb 2026 20:46:06 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Refactor homepage layout and structure]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/1d17ce2ed8171cb232965e09525d2bb37721dc16</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/1d17ce2ed8171cb232965e09525d2bb37721dc16</guid>
-      <pubDate>Sun, 22 Feb 2026 15:45:58 -0500</pubDate>
     </item>
   </channel>
 </rss>
