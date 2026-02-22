@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Sun, 22 Feb 2026 23:35:05 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Feb 2026 23:36:47 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Update homepage.html]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/ffbc804efd0b6a14c06aab20fff5b6f74aff7c7b</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/ffbc804efd0b6a14c06aab20fff5b6f74aff7c7b</guid>
+      <pubDate>Sun, 22 Feb 2026 18:36:39 -0500</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/6a7299c4c7ef511407526d3474440da48cbdcffe</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/6a7299c4c7ef511407526d3474440da48cbdcffe</guid>
+      <pubDate>Sun, 22 Feb 2026 23:35:05 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[Update homepage.html]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/d9458b5b8ed2b71e3911c27e6d70a30e7041dbea</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/f0603d357cda840d79097598f42b5d9731ed7e1d</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/f0603d357cda840d79097598f42b5d9731ed7e1d</guid>
       <pubDate>Sun, 22 Feb 2026 16:18:51 -0500</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c855c4952964dfbc91dca133ed388d804e3eca1a</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c855c4952964dfbc91dca133ed388d804e3eca1a</guid>
-      <pubDate>Sun, 22 Feb 2026 21:06:55 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Add JavaScript bubble cursor effect]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/314bde77da6518403ea246184350a4b1fd0b4954</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/314bde77da6518403ea246184350a4b1fd0b4954</guid>
-      <pubDate>Sun, 22 Feb 2026 16:06:48 -0500</pubDate>
     </item>
   </channel>
 </rss>
