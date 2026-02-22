@@ -9,83 +9,68 @@ var direction="right"; // set to "left" for text to appear from left
 *(c)2003-16 mf2fm web-design*
 *  http://www.mf2fm.com/rv  *
 * DON'T EDIT BELOW THIS BOX *
+
+sorry i had to  edit it bc 
+the span tag was in the wrong spot 3:
+
+- durokotte
+
 \***************************/
-var swide, shigh;
-var rwlft=new Array();
+var speed = 25;      // speed of animation, lower is faster
+var interval = 0.25; // seconds between entry of each letter
+var direction = "right"; // "left" or "right"
 
-if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
-  var oldonload=window.onload;
-  if (typeof(oldonload)!='function') window.onload=funky;
-  else window.onload=function() {
-    if (oldonload) oldonload();
-    funky();
-  }
-}
+var rwlft = [];
 
-addRVLoadEvent(rightwrite);
+window.onload = rightwrite;
 
-function rightwrite() { if (document.getElementById) {
-  var i, rwli, rwtxt, rwrit;
-  set_width();
-  rwrit=document.getElementById("rightwrite");
-  rwrit.style.position="relative";
-  rwtxt=rwrit.firstChild.nodeValue;
-  while (rwrit.childNodes.length) rwrit.removeChild(rwrit.childNodes[0]);
-  for (i=0; i<rwtxt.length; i++) {
-    rwli=document.createElement("span");
-    rwli.setAttribute("id", "rwr"+i);
-    rwli.style.position="relative";
-    rwli.style.visibility="hidden";
-    rwli.appendChild(document.createTextNode(rwtxt.charAt(i)));
+function rightwrite() {
+  var rwrit = document.getElementById("rightwrite");
+  if (!rwrit) return; // stop if element doesn't exist
+
+  var rwtxt = rwrit.textContent;       // safer than firstChild.nodeValue
+  var rect = rwrit.getBoundingClientRect();
+  var originalLeft = rect.left + window.scrollX;  // absolute position
+  var originalTop = rect.top + window.scrollY;
+
+  // clear original content
+  rwrit.textContent = "";
+  rwrit.style.position = "relative"; // relative to itself
+  rwrit.style.display = "inline-block";
+
+  // create spans for each letter
+  for (let i = 0; i < rwtxt.length; i++) {
+    let rwli = document.createElement("span");
+    rwli.id = "rwr" + i;
+    rwli.style.position = "relative"; 
+    rwli.style.visibility = "hidden";
+    rwli.style.left = "0px";
+    rwli.textContent = rwtxt.charAt(i);
     rwrit.appendChild(rwli);
   }
-  for (i=0; i<rwtxt.length; i++) {
-    rwlft[i]=(direction=="right")?swide-getPageLeft(rwli):-getPageLeft(rwli);
-    setTimeout("fly_me("+i+")", 1000*interval*((direction=="right")?i:rwtxt.length-i));
-  }
-}}
 
-function getPageLeft(el) {
-  var x=0;
-  do { x+=el.offsetLeft }
-  while ((el=el.offsetParent)!=null) ;
-  return x;
+  // store offset for each letter relative to original position
+  for (let i = 0; i < rwtxt.length; i++) {
+    let rwme = document.getElementById("rwr" + i);
+    let rwLeft = rwme.offsetLeft; // relative to parent
+    rwlft[i] = (direction === "right") ? rwLeft + 50 : rwLeft - 50; // start 50px away
+    setTimeout(() => fly_me(i), 1000 * interval * ((direction === "right") ? i : rwtxt.length - i));
+  }
 }
 
-window.onresize=set_width;
-function set_width() {
-  var sw_min=999999;
-  var sh_min=999999;
-  if (document.documentElement && document.documentElement.clientWidth) {
-    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
-    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
-  }
-  else if (typeof(self.innerWidth)=='number' && self.innerWidth) {
-    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
-    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
-  }
-  else if (document.body.clientWidth) {
-    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
-    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
-  }
-  if (sw_min==999999 || sh_min==999999) {
-    sw_min=800;
-    sh_min=600;
-  }
-  swide=sw_min;
-  shigh=sh_min;
-}
+function fly_me(i) {
+  let rwme = document.getElementById("rwr" + i);
+  rwme.style.visibility = "visible";
 
-function fly_me(let) {
-  var rwme=document.getElementById("rwr"+let);
-  if (rwme.style.visibility=="hidden") rwme.style.visibility="visible";
-  if (Math.abs(rwlft[let])>0.5) {
-    rwme.style.left=Math.floor(rwlft[let])+"px";
-    rwlft[let]+=(direction=="left")?1:-1;
-    rwlft[let]*=0.98;
-    setTimeout("fly_me("+let+")", speed);
+  if (Math.abs(rwlft[i]) > 0.5) {
+    let currentLeft = parseFloat(rwme.style.left || 0);
+    let delta = (direction === "left") ? 1 : -1;
+    rwme.style.left = (currentLeft + delta + rwlft[i] * 0.02) + "px";
+    rwlft[i] += delta;
+    rwlft[i] *= 0.98;
+    setTimeout(() => fly_me(i), speed);
+  } else {
+    rwme.style.left = "0px"; // stop at original position
   }
-  else rwme.style.left="0px";
 }
-// ]]>
 </script>
