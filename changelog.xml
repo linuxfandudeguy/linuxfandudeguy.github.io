@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Sun, 22 Feb 2026 20:43:17 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Feb 2026 20:46:06 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Refactor homepage layout and structure]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/1d17ce2ed8171cb232965e09525d2bb37721dc16</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/1d17ce2ed8171cb232965e09525d2bb37721dc16</guid>
+      <pubDate>Sun, 22 Feb 2026 15:45:58 -0500</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/051598be34ef4666484f576ce2c89e2b249178c3</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/051598be34ef4666484f576ce2c89e2b249178c3</guid>
+      <pubDate>Sun, 22 Feb 2026 20:43:17 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[remove loader]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/bcfc5022f05ba2a9e429144cf5972b9a80fe34a4</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/d89019d0f84c4b473799750e4aca3a3ee140bfd9</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/d89019d0f84c4b473799750e4aca3a3ee140bfd9</guid>
       <pubDate>Fri, 20 Feb 2026 16:52:39 -0500</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Update print statement from 'Hello' to 'Goodbye']]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/d6ae579d6a436a8616373c5eb62ad9fa96a9aa53</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/d6ae579d6a436a8616373c5eb62ad9fa96a9aa53</guid>
-      <pubDate>Fri, 20 Feb 2026 16:52:30 -0500</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/6555107615547eae66a93d307d04da804c035154</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/6555107615547eae66a93d307d04da804c035154</guid>
-      <pubDate>Fri, 20 Feb 2026 21:50:40 +0000</pubDate>
     </item>
   </channel>
 </rss>
