@@ -15,6 +15,14 @@ layout: null
 </head>
 <body>
 
+	<script type="text/javascript">
+message = "デュロコッテの2D秘密基地☆(づ｡◕‿‿◕｡)づ------Durokotte’s 2D Secret Base ☆(づ｡◕‿‿◕｡)づ------듀로코테의 2D 비밀기지☆(づ｡◕‿‿◕｡)づ ";
+function step() {
+message = message.substr(1) + message.substr(0,1);
+document.title = message.substr(0,15);
+}
+</script>
+	
 	<div class="container">
 
 		<header>
@@ -330,6 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </body>
 </html>
+
 
 
 
