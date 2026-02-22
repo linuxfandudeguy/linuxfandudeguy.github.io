@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Sun, 22 Feb 2026 20:48:46 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Feb 2026 20:51:22 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Update effects.html]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/28b52aeec3046d7e380182b9f4363be680b34a85</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/28b52aeec3046d7e380182b9f4363be680b34a85</guid>
+      <pubDate>Sun, 22 Feb 2026 15:51:14 -0500</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/b93fb3e995e50bc3ba6a0b0bb3b980d7499d2cc4</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/b93fb3e995e50bc3ba6a0b0bb3b980d7499d2cc4</guid>
+      <pubDate>Sun, 22 Feb 2026 20:48:46 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[put in effects]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/6e2bfbfcffe46d096b812aa8d828af97a7af8836</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/62f9cb5784bb9d3c528b97b0b2e8f6912ceacc0c</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/62f9cb5784bb9d3c528b97b0b2e8f6912ceacc0c</guid>
       <pubDate>Sun, 22 Feb 2026 15:38:09 -0500</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/6c8e69e2b2591471808f9d490ec7cad56fe82564</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/6c8e69e2b2591471808f9d490ec7cad56fe82564</guid>
-      <pubDate>Sat, 21 Feb 2026 20:01:30 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Update fmt.Println message from 'Hello' to 'Goodbye']]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/bf7d2b925dc2ed4a6ce4263e1efcf681daaa197b</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/bf7d2b925dc2ed4a6ce4263e1efcf681daaa197b</guid>
-      <pubDate>Sat, 21 Feb 2026 15:01:22 -0500</pubDate>
     </item>
   </channel>
 </rss>
