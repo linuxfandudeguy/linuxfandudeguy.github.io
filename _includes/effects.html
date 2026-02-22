@@ -1,0 +1,149 @@
+<script type="text/javascript">
+// <![CDATA[
+var speed=25; // speed of animation, lower is faster
+var interval=0.25; // seconds between entry of each letter
+var direction="right"; // set to "left" for text to appear from left
+
+/***************************\
+* Right Write Text Effect   *
+*(c)2003-16 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+\***************************/
+var swide, shigh;
+var rwlft=new Array();
+
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addRVLoadEvent(rightwrite);
+
+function rightwrite() { if (document.getElementById) {
+  var i, rwli, rwtxt, rwrit;
+  set_width();
+  rwrit=document.getElementById("rightwrite");
+  rwrit.style.position="relative";
+  rwtxt=rwrit.firstChild.nodeValue;
+  while (rwrit.childNodes.length) rwrit.removeChild(rwrit.childNodes[0]);
+  for (i=0; i<rwtxt.length; i++) {
+    rwli=document.createElement("span");
+    rwli.setAttribute("id", "rwr"+i);
+    rwli.style.position="relative";
+    rwli.style.visibility="hidden";
+    rwli.appendChild(document.createTextNode(rwtxt.charAt(i)));
+    rwrit.appendChild(rwli);
+  }
+  for (i=0; i<rwtxt.length; i++) {
+    rwlft[i]=(direction=="right")?swide-getPageLeft(rwli):-getPageLeft(rwli);
+    setTimeout("fly_me("+i+")", 1000*interval*((direction=="right")?i:rwtxt.length-i));
+  }
+}}
+
+function getPageLeft(el) {
+  var x=0;
+  do { x+=el.offsetLeft }
+  while ((el=el.offsetParent)!=null) ;
+  return x;
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  else if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  else if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+
+function fly_me(let) {
+  var rwme=document.getElementById("rwr"+let);
+  if (rwme.style.visibility=="hidden") rwme.style.visibility="visible";
+  if (Math.abs(rwlft[let])>0.5) {
+    rwme.style.left=Math.floor(rwlft[let])+"px";
+    rwlft[let]+=(direction=="left")?1:-1;
+    rwlft[let]*=0.98;
+    setTimeout("fly_me("+let+")", speed);
+  }
+  else rwme.style.left="0px";
+}
+// ]]>
+</script>
+<script type="text/javascript">
+// <![CDATA[
+var bgcolour="#ffffff"; // background colour
+var hlcolour="#ddccff"; // highlight colour
+var speed=250; // speed colours change, 1 second = 1000
+
+/****************************
+*    Phone-In Text Effect   *
+*(c) 2003-6 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var p_txt;
+window.onload=function() { if (document.getElementById) {
+  var phoni;
+  var phone=document.getElementById("phonein");
+  p_txt=phone.firstChild.nodeValue;
+  while (phone.childNodes.length) phone.removeChild(phone.childNodes[0]);
+  for (var i=0; i<p_txt.length; i++) {
+    phoni=document.createElement("div");
+	phoni.style.display="inline";
+    phoni.setAttribute("id", "phon"+i);
+    phoni.appendChild(document.createTextNode(p_txt.charAt(i)));
+    phone.appendChild(phoni);
+  }
+  phone_me((p_txt=p_txt.length)-1);
+}}
+
+function phone_me(p_cnt) {
+  var p_tmp=document.getElementById("phon"+p_cnt);
+  p_tmp.style.fontWeight="normal";
+  if (document.all) p_tmp.style.filter='';
+  p_tmp.style.backgroundColor=bgcolour;
+  p_cnt=++p_cnt%p_txt;
+  p_tmp=document.getElementById("phon"+p_cnt);
+  if (p_tmp.firstChild.nodeValue!=" ") {
+    p_tmp.style.fontWeight="bold";
+    if (document.all) p_tmp.style.filter="GLOW(strength=3, color=#"+bgcolour+")";
+    p_tmp.style.backgroundColor=hlcolour;
+  }
+  setTimeout("phone_me("+p_cnt+")", speed);
+}
+// ]]>
+</script>
+
+<script>
+  // Select all <a> elements 
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll("a");
+
+  links.forEach(link => {
+// only add class if it's a text link (not an image)
+    if (link.textContent.trim() !== "") {
+      link.classList.add("phonein");
+    }
+  });
+}); 
+</script>
