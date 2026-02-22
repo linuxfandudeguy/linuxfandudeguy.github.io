@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Sun, 22 Feb 2026 20:51:22 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Feb 2026 20:53:49 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Update homepage structure and content]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/f518df77b6c79ed1a225e8495ed9b5bc00d86715</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/f518df77b6c79ed1a225e8495ed9b5bc00d86715</guid>
+      <pubDate>Sun, 22 Feb 2026 15:53:41 -0500</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/8d2d85998204f2a0692163e12a0c832ef714f6fc</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/8d2d85998204f2a0692163e12a0c832ef714f6fc</guid>
+      <pubDate>Sun, 22 Feb 2026 20:51:22 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[Update effects.html]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/28b52aeec3046d7e380182b9f4363be680b34a85</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/bcfc5022f05ba2a9e429144cf5972b9a80fe34a4</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/bcfc5022f05ba2a9e429144cf5972b9a80fe34a4</guid>
       <pubDate>Sun, 22 Feb 2026 15:43:09 -0500</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/f3ab789677876de66ff6efa429c4ffa675c338a0</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/f3ab789677876de66ff6efa429c4ffa675c338a0</guid>
-      <pubDate>Sun, 22 Feb 2026 20:38:17 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Add text effects scripts for animations]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/62f9cb5784bb9d3c528b97b0b2e8f6912ceacc0c</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/62f9cb5784bb9d3c528b97b0b2e8f6912ceacc0c</guid>
-      <pubDate>Sun, 22 Feb 2026 15:38:09 -0500</pubDate>
     </item>
   </channel>
 </rss>
