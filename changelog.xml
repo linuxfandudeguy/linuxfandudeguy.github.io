@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Mon, 23 Feb 2026 00:03:22 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Feb 2026 00:08:13 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Change snowflake image sources to local assets]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/bce0502963ca9b6272ed76901c607d90491ec0aa</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/bce0502963ca9b6272ed76901c607d90491ec0aa</guid>
+      <pubDate>Sun, 22 Feb 2026 19:08:04 -0500</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/ff058236e02ae4b3ac083c553dac6a22da4f169d</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/ff058236e02ae4b3ac083c553dac6a22da4f169d</guid>
+      <pubDate>Mon, 23 Feb 2026 00:03:22 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[Update effects.html]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/6cd5acfa7e71cbbe860f1a8383438a86ad81ac57</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/3401b7b588d513b0e08e29d2f14c89c3a0a77bcb</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/3401b7b588d513b0e08e29d2f14c89c3a0a77bcb</guid>
       <pubDate>Sun, 22 Feb 2026 18:31:44 -0500</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/9ba216022af91a4620af20573cb23bccf586d033</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/9ba216022af91a4620af20573cb23bccf586d033</guid>
-      <pubDate>Sun, 22 Feb 2026 23:29:25 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Update homepage.html]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/824e3e4bae53923ecbab4f1ce78fd0790ea175da</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/824e3e4bae53923ecbab4f1ce78fd0790ea175da</guid>
-      <pubDate>Sun, 22 Feb 2026 18:29:17 -0500</pubDate>
     </item>
   </channel>
 </rss>
