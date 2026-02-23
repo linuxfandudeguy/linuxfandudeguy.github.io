@@ -342,7 +342,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(fetchLastFM, 3000);
 });
 </script>
-	<script> async function discordChecker() {
+<script>
+	async function discordChecker() {
   try {
     const response = await fetch('https://api.lanyard.rest/v1/users/1443022848443551849');
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -354,9 +355,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const status = data.discord_status || "offline";
 
     const statusDetails = document.getElementById("online");
-    if (statusDetails) {
-      statusDetails.innerHTML = `${username} is ${status}`;
-    }
 
     const statusColors = {
       online: "#5dff8a",
@@ -365,9 +363,36 @@ document.addEventListener('DOMContentLoaded', () => {
       offline: "#5d5d5d",
     };
 
+    const currentColor = statusColors[status] || "#5d5d5d";
+
+    if (statusDetails) {
+      statusDetails.innerHTML = `${username} is ${status}`;
+
+      // Remove old animation (important so it refreshes properly)
+      statusDetails.style.animation = "none";
+      void statusDetails.offsetWidth; // force reflow
+
+      // Apply flashing animation
+      statusDetails.style.color = currentColor;
+      statusDetails.style.animation = "statusFlash 1s infinite alternate";
+    }
+
     const blob = document.getElementById("status-blob");
     if (blob) {
-      blob.style.backgroundColor = statusColors[status] || "#5d5d5d";
+      blob.style.backgroundColor = currentColor;
+    }
+
+    // Create keyframes once
+    if (!document.getElementById("statusFlashStyle")) {
+      const style = document.createElement("style");
+      style.id = "statusFlashStyle";
+      style.innerHTML = `
+        @keyframes statusFlash {
+          0% { opacity: 1; }
+          100% { opacity: 0.3; }
+        }
+      `;
+      document.head.appendChild(style);
     }
 
   } catch (error) {
@@ -377,44 +402,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 discordChecker();
 setInterval(discordChecker, 2000);
-async function discordChecker() {
-  try {
-    const response = await fetch('https://api.lanyard.rest/v1/users/1443022848443551849');
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
-    const splingus = await response.json();
-    const data = splingus.data;
-
-    const username = data.discord_user?.username || "User";
-    const status = data.discord_status || "offline";
-
-    const statusDetails = document.getElementById("online");
-    if (statusDetails) {
-      statusDetails.innerHTML = `${username} is ${status}`;
-    }
-
-    const statusColors = {
-      online: "#5dff8a",
-      idle: "#cb9654",
-      dnd: "#d83a43",
-      offline: "#5d5d5d",
-    };
-
-    const blob = document.getElementById("status-blob");
-    if (blob) {
-      blob.style.backgroundColor = statusColors[status] || "#5d5d5d";
-    }
-
-  } catch (error) {
-    console.error("failed to fetch!!", error);
-  }
-}
-
-discordChecker();
-setInterval(discordChecker, 2000);
-	</script>
+</script>
 </body>
 </html>
+
 
 
 
