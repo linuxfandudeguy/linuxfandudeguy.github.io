@@ -98,6 +98,7 @@ setInterval(step, 200);
 	
     </span>
   </details>
+	<span id="online">	 <img src="assets/email_btn.gif" alt="loading"> Requesting lanyard.rest API for status </span>
 </p>
 
 			<h2>socials</h2>
@@ -339,9 +340,38 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(fetchLastFM, 3000);
 });
 </script>
+	
+	<script>
+async function onlineChecker() {
+  try {
+    const response = await fetch('https://linuxfandudeguyapi.netlify.app/.netlify/functions/online');
+    if (!response.ok) throw new Error(`Network error: ${response.status}`);
+
+    const data = await response.json();
+
+    const status = data.discord_status || 'offline';
+    const username = data.discord_user ? data.discord_user.username : 'User';
+
+    // Put the status into the element with id="online"
+    const onlineElem = document.getElementById('online');
+    if (onlineElem) {
+      onlineElem.textContent = `${username} is ${status}`;
+    }
+
+    console.log(`${username} is ${status}`);
+  } catch (error) {
+    console.error("Failed to fetch online status:", error);
+  }
+}
+
+// Initial check + interval
+onlineChecker();
+setInterval(onlineChecker, 2000);
+}); </script>
 
 </body>
 </html>
+
 
 
 
