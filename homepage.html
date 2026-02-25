@@ -22,7 +22,19 @@ layout: null
 
 <!-- Style My Tooltips plugin -->
 <script src="assets/jquery.style-my-tooltips.min.js"></script>
-
+<script>
+(function($){
+    $(document).ready(function(){
+        $("[title]").style_my_tooltips({ 
+            tip_follows_cursor: true,
+            tip_delay_time: 700,
+            tip_fade_speed: 300,
+            attribute: "title"
+        });
+    });
+})(jQuery);
+</script>
+	
 <body>
 
 	<script type="text/javascript">
@@ -146,7 +158,7 @@ setInterval(step, 200);
   <img src="assets/mikutcg_deck.png" alt="My Miku TCG deck">
 </a>
 			<a href="https://onigiru.wixsite.com/onigiri" target="_blank" rel="noopener noreferrer">
-  <img src="assets/57bf5e_8ae8556bdba2439f8e707a0f9beb7ad1~mv2.gif" alt="Onigiri site image">
+  <img src="assets/57bf5e_8ae8556bdba2439f8e707a0f9beb7ad1~mv2.gif" alt="i love お握り ! ! !  ">
 </a><pre>
 			<a href="https://lockheart.love/collections/cliques">Cringe is Dead</a> || Vocaloid</pre>
 			<h1>fanlistings</h1>
@@ -287,7 +299,7 @@ setInterval(step, 200);
 		</section>
 		
 	</div>
-<div align="center"><img src="assets/banner_01.gif"> </div>
+<div align="center"><img src="assets/banner_01.gif" alt="らき☆すた フォーライフ！！！ "> </div>
 	<footer>
 		<span>2026 durokotte | powered by <a href="https://docs.github.com/en/pages/">github pages</a> | <a href="https://github.com/Pokymon/">fauqi amar hizbullah</a> for <a href="https://foo.ng">foo.ng</a>  | cyanobacteria.css by <a href="https://ribo.zone/free/layouts/">ribo.zone</a></span>
 	</footer>
@@ -416,6 +428,7 @@ setInterval(discordChecker, 2000);
 </script>
 </body>
 </html>
+
 
 
 
