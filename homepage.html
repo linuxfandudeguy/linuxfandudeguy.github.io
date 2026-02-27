@@ -69,20 +69,46 @@ setInterval(step, 200);
 			</nav>
 <a target="_blank" href="https://durokotte.foo.ng"><img src="assets/download.png" width="88" height="31"></a><p>hotlink ig idc</p>
 			<h5>others</h5>
-           <a href="https://dimden.dev/"><img src="https://dimden.dev/images/88x31.gif"></a>
-			<a href="https://melps.neocities.org" target="_blank"><img src="https://melps.neocities.org/limk1.jpg" width='88px'></a> 
-			<a href='https://eidoli.ca'><img src='https://eidoli.ca/ee.png' style='width:88px;image-rendering:pixelated;'/></a>
-			<a href="https://melankorin.net/"><img src="https://melankorin.net/assets/img/buttons/button-1.gif" alt=""></a>
-			<a href="https://melankorin.net/"><img src="https://melankorin.net/assets/img/buttons/button-32x32-1.gif" alt=""></a>
-            <a href="https://himawari.fun" rel="external"><img src="https://himawari.fun/himawaributton.png" alt="old-web style button for himawari.fun" width="88" height="31" /></a>
-			<a href="https://rice.place/" target="_blank"><img src="https://rice.nekoweb.org/button/riceus.gif"></a>
-			<a href="https://sana.arataka.moe/" target="_blank"><img alt="hamarei" src="https://sana.arataka.moe/image/hamarei.gif"/></a>
-			<a href="https://reigen.moe" target="_blank" rel="noopener noreferrer">
-  <img src="assets/reigenmoe-banner.gif" alt="Reigen.moe Banner">
-				<a href="https://meows.zip"><img src="https://meows.zip/meowszip.png"></a>
-				<a href="https://alliedalmond.nekoweb.org/"><img src="https://i.postimg.cc/28h4DyQt/almond.gif"></a>
-				<a href="https://davemiller.neocities.org/" target="_blank"><img src="https://file.garden/ZUFS5P2dI3BS8SLG/imgs/davemiller_button.gif" alt="button to davemiller's neocities page"></a>
-				<a href="https://melonsoda.nekoweb.org"><img src="https://melonsoda.nekoweb.org/images/button.gif" title="Your new vacation location!"></a>
+<style>
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.button88x31 {
+  width: 88px;
+  height: 31px;
+  image-rendering: pixelated;
+}
+
+.button32px {
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+}
+
+.pixel-art {
+  image-rendering: pixelated;
+}
+</style>
+
+<div class="button-row">
+  <a href="https://dimden.dev/"><img class="button88x31" src="https://dimden.dev/images/88x31.gif" alt="Dimden Dev" title="the reason i started indieweb"></a>
+  <a href="https://melps.neocities.org" target="_blank"><img class="button88x31" src="https://melps.neocities.org/limk1.jpg" alt="Melps" title="has some good graphics"></a>
+  <a href="https://eidoli.ca"><img class="button88x31 pixel-art" src="https://eidoli.ca/ee.png" alt="Eidoli" title="very interesting, you should check her out"></a>
+  <a href="https://melankorin.net/"><img class="button88x31" src="https://melankorin.net/assets/img/buttons/button-1.gif" alt="Melankorin" title="melankorin"></a>
+  <a href="https://melankorin.net/"><img class="button32px" src="https://melankorin.net/assets/img/buttons/button-32x32-1.gif" alt="Melankorin small" title="also melankorin"></a>
+  <a href="https://himawari.fun" rel="external"><img class="button88x31" src="https://himawari.fun/himawaributton.png" alt="Himawari Fun" title="she is so talented"></a>
+  <a href="https://rice.place/" target="_blank"><img class="button88x31" src="https://rice.nekoweb.org/button/riceus.gif" alt="Rice Place" title="my indieweb role model"></a>
+  <a href="https://sana.arataka.moe/" target="_blank"><img class="button88x31" src="https://sana.arataka.moe/image/hamarei.gif" alt="Hamarei" title="nothing special but still a good site"></a>
+  <a href="https://reigen.moe" target="_blank" rel="noopener noreferrer"><img class="button88x31" src="assets/reigenmoe-banner.gif" alt="Reigen.moe Banner" title="how the hell is their website so good"></a>
+  <a href="https://meows.zip"><img class="button88x31" src="https://meows.zip/meowszip.png" alt="Meows.zip"></a>
+  <a href="https://alliedalmond.nekoweb.org/"><img class="button88x31" src="https://i.postimg.cc/28h4DyQt/almond.gif" alt="Allied Almond" title="the best animator eva!!!"></a>
+  <a href="https://davemiller.neocities.org/" target="_blank"><img class="button88x31" src="https://file.garden/ZUFS5P2dI3BS8SLG/imgs/davemiller_button.gif" alt="Davemiller" title="fnaf is why i linked this lol"></a>
+  <a href="https://melonsoda.nekoweb.org"><img class="button88x31" src="https://melonsoda.nekoweb.org/images/button.gif" alt="Melonsoda" title="i love their site it is so good"></a>
+</div>
 
 		</div>
 		
@@ -251,10 +277,8 @@ setInterval(step, 200);
     }
 
   </style>
-</head>
 
-<!-- ===== BODY SECTION ===== -->
-<body>
+
 
 <div id="customPlayer">
   <div id="playPause" class="control-btn">►</div>
@@ -287,7 +311,6 @@ setInterval(step, 200);
   });
 </script>
 
-</body>
 
 			<!-- FC2 Counter  Ends here -->
 		</section>
@@ -454,6 +477,7 @@ connect();
 </script>
 </body>
 </html>
+
 
 
 
