@@ -3,10 +3,31 @@
   <div class="calendar-header">
     <h2 id="monthYear"></h2>
   </div>
+
   <div class="calendar-days">
-    <div>日</div><div>月</div><div>火</div><div>水</div>
-    <div>木</div><div>金</div><div>土</div>
+    <div>
+      <img src="assets/nuko/nuko日ようSunday.gif" title="Sunday" alt="Sunday">
+    </div>
+    <div>
+      <img src="assets/nuko/nuko月ようMonday.gif" title="Monday" alt="Monday">
+    </div>
+    <div>
+      <img src="assets/nuko/nuko火ようTuesday.gif" title="Tuesday" alt="Tuesday">
+    </div>
+    <div>
+      <img src="assets/nuko/nuko水ようWednesday.gif" title="Wednesday" alt="Wednesday">
+    </div>
+    <div>
+      <img src="assets/nuko/nuko木ようThursday.gif" title="Thursday" alt="Thursday">
+    </div>
+    <div>
+      <img src="assets/nuko/nuko金ようFriday.gif" title="Friday" alt="Friday">
+    </div>
+    <div>
+      <img src="assets/nuko/nuko土ようSaturday.gif" title="Saturday" alt="Saturday">
+    </div>
   </div>
+
   <div class="calendar-dates" id="calendarDates"></div>
 </div>
 
@@ -28,6 +49,11 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     text-align: center;
+  }
+
+  .calendar-days img {
+    max-width: 48px;   /* adjust if you want bigger */
+    height: auto;
   }
 
   .calendar-dates div {
@@ -72,9 +98,11 @@
     for (let day = 1; day <= daysInMonth; day++) {
       const dateDiv = document.createElement("div");
       dateDiv.textContent = day;
+
       if (day === todayDate && month === currentMonth && year === currentYear) {
         dateDiv.classList.add("today");
       }
+
       calendarDates.appendChild(dateDiv);
     }
 
