@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Fri, 27 Feb 2026 02:17:47 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Feb 2026 02:22:46 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[so the images dont look like trash]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/0edcf6fbdfa4139b08a5ca03663ef54e339bb2ac</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/0edcf6fbdfa4139b08a5ca03663ef54e339bb2ac</guid>
+      <pubDate>Thu, 26 Feb 2026 21:22:38 -0500</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7bbca729f232e09325f9dbdad00f62eb9ac6b98d</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7bbca729f232e09325f9dbdad00f62eb9ac6b98d</guid>
+      <pubDate>Fri, 27 Feb 2026 02:17:47 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[make weekday images larger size]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/941746d49d1d97a38812b0a1db074a7fbe9b8b11</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/aa1186ddca5697f0e02a7e5ce85cd85220582170</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/aa1186ddca5697f0e02a7e5ce85cd85220582170</guid>
       <pubDate>Thu, 26 Feb 2026 21:09:45 -0500</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7160c711784c33f991fcb13e1f1e1c349c454401</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7160c711784c33f991fcb13e1f1e1c349c454401</guid>
-      <pubDate>Thu, 26 Feb 2026 03:21:28 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[change lanyard api to use websockets instead of just rest polling]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/8c53c790b9c94e6216e4625cf54a8122c6462b01</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/8c53c790b9c94e6216e4625cf54a8122c6462b01</guid>
-      <pubDate>Wed, 25 Feb 2026 22:21:20 -0500</pubDate>
     </item>
   </channel>
 </rss>
