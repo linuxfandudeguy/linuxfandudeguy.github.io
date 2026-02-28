@@ -264,3 +264,40 @@ function createDiv(height, width) {
   <div class="snowflake"><img src="assets/tumblr_c0af9a08ea12a0b7f6ccafb9f3723ad4_0ad6540d_100.ico.png" /></div>
 </div>
 
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("pause_gifs") !== "true") return;
+
+  function freezeGif(img) {
+    // Skip if already processed
+    if (img.dataset.frozen) return;
+
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+
+    const tempImg = new Image();
+    tempImg.crossOrigin = "anonymous";
+    tempImg.src = img.src;
+
+    tempImg.onload = function () {
+      canvas.width = tempImg.width;
+      canvas.height = tempImg.height;
+
+      ctx.drawImage(tempImg, 0, 0);
+
+      try {
+        img.src = canvas.toDataURL("image/png");
+        img.dataset.frozen = "true";
+      } catch (e) {
+        console.warn("Could not freeze GIF:", img.src);
+      }
+    };
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll("img[src$='.gif'], img[src$='.GIF']");
+    images.forEach(freezeGif);
+  });
+})();
+</script>
