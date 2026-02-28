@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Fri, 27 Feb 2026 02:45:31 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Feb 2026 18:55:18 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Update effects.html]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/236304745b3e22c49cd5173b3d3556b0883a23d7</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/236304745b3e22c49cd5173b3d3556b0883a23d7</guid>
+      <pubDate>Sat, 28 Feb 2026 13:55:09 -0500</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/3adb36c51c40a7ed3f02b88655a54230a7787e69</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/3adb36c51c40a7ed3f02b88655a54230a7787e69</guid>
+      <pubDate>Fri, 27 Feb 2026 02:45:32 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[Update homepage.html]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/931e3dbc09eb266d86d031a80c7170a94020704f</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/79dfd7f3334e77056c7cd4610f061e7de22148b7</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/79dfd7f3334e77056c7cd4610f061e7de22148b7</guid>
       <pubDate>Thu, 26 Feb 2026 21:23:51 -0500</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/70847ed90f153e2308e4e40809b0cd0511aa09eb</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/70847ed90f153e2308e4e40809b0cd0511aa09eb</guid>
-      <pubDate>Fri, 27 Feb 2026 02:22:46 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[so the images dont look like trash]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/0edcf6fbdfa4139b08a5ca03663ef54e339bb2ac</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/0edcf6fbdfa4139b08a5ca03663ef54e339bb2ac</guid>
-      <pubDate>Thu, 26 Feb 2026 21:22:38 -0500</pubDate>
     </item>
   </channel>
 </rss>
