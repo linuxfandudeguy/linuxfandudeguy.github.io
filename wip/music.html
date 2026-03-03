@@ -1,42 +1,71 @@
+---
+layout: null
+---
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Favorite Music</title>
+<link href="cyanobacteria.css?v={{ site.time | date: '%s' }}" rel="stylesheet" type="text/css" media="all">
+<link rel="icon" type="image/png" href="{{ '/assets/tumblr_c0af9a08ea12a0b7f6ccafb9f3723ad4_0ad6540d_100.ico.png' | relative_url }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- 7.css -->
 <link rel="stylesheet" href="https://unpkg.com/7.css">
 
 <style>
 body {
-  background: #008080; /* classic teal looks good with 7.css */
+  background:#008080;
   padding: 30px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+a.button {
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+h1 {
+  margin-bottom: 1rem;
 }
 
 .music-grid {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
+/* Square album masks */
 .album {
+  width: 160px;
+  height: 160px;
   cursor: pointer;
+  overflow: hidden;
+  border-radius: 6px;
+  position: relative;
+  transition: transform 0.2s;
 }
-
+.album:hover {
+  transform: scale(1.05);
+}
 .album img {
-  width: 150px;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
+/* 7.css window & overlay */
 #musicWindow {
   display: none;
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top:50%;
+  left:50%;
   transform: translate(-50%, -50%);
   z-index: 999;
 }
-
 .overlay {
   display: none;
   position: fixed;
@@ -48,37 +77,37 @@ body {
 </head>
 
 <body>
+<a href="/homepage.html" class="button">back</a>
 
-<h2>My Favorite Music</h2>
+<h1>Favorite Music</h1>
 
 <div class="music-grid">
 
-  <!-- YOUR TRACK -->
+  <!-- 0k - 27315_7.1 -->
   <div class="album"
        onclick="openPlayer('https://www.youtube.com/embed/VUaKxrg_7uE')">
-    <img src="https://img.youtube.com/vi/VUaKxrg_7uE/hqdefault.jpg"
-         alt="0k - 27315_7.1">
-   
+    <img src="assets/music/27315_7.1.jpg" alt="0k - 27315_7.1">
   </div>
- <div class="album"
-     onclick="openPlayer('https://www.youtube.com/embed/oQzhOzJgZgI')">
-  <img src="https://img.youtube.com/vi/oQzhOzJgZgI/hqdefault.jpg"
-       alt="【GUMI】Coelacanth【ｵﾘｼﾞﾅﾙ】">
-</div>
+
+  <!-- 【GUMI】Coelacanth【ｵﾘｼﾞﾅﾙ】 -->
+  <div class="album"
+       onclick="openPlayer('https://www.youtube.com/embed/oQzhOzJgZgI')">
+    <img src="assets/music/coelacanth.jpg" alt="【GUMI】Coelacanth【ｵﾘｼﾞﾅﾙ】">
+  </div>
+
 </div>
 
 <!-- Overlay -->
 <div class="overlay" id="overlay" onclick="closePlayer()"></div>
 
 <!-- 7.css Window -->
-<div class="window active" id="musicWindow" style="width: 640px;">
+<div class="window active" id="musicWindow" style="width:640px;">
   <div class="title-bar">
     <div class="title-bar-text">Now Playing</div>
     <div class="title-bar-controls">
       <button aria-label="Close" onclick="closePlayer()"></button>
     </div>
   </div>
-
   <div class="window-body">
     <iframe id="player"
             width="100%"
@@ -103,6 +132,5 @@ function closePlayer() {
   document.getElementById("overlay").style.display = "none";
 }
 </script>
-
 </body>
 </html>
