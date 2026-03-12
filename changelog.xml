@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Sun, 08 Mar 2026 18:31:11 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2026 19:35:53 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Add files via upload]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/a68785ca618534434be9a3fbdd655b118ff57c8b</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/a68785ca618534434be9a3fbdd655b118ff57c8b</guid>
+      <pubDate>Thu, 12 Mar 2026 15:35:42 -0400</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/b328c0d95142b640457e9c377673d2d5bf26c395</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/b328c0d95142b640457e9c377673d2d5bf26c395</guid>
+      <pubDate>Sun, 8 Mar 2026 18:31:11 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[Update homepage.html]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/efd2a2d20e2db5d3944821482af96950d9f6f0b9</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/8579561296c2b45d31f973469c40e0484ec5ecfc</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/8579561296c2b45d31f973469c40e0484ec5ecfc</guid>
       <pubDate>Mon, 2 Mar 2026 19:50:14 -0500</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/25ed3048b001ae25b4fc7b669b0ac5da869134e3</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/25ed3048b001ae25b4fc7b669b0ac5da869134e3</guid>
-      <pubDate>Tue, 3 Mar 2026 00:49:57 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Update music.html]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c12ac33dc1c4e3cdc4db1bfa143eeea75e5c8c0e</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c12ac33dc1c4e3cdc4db1bfa143eeea75e5c8c0e</guid>
-      <pubDate>Mon, 2 Mar 2026 19:49:49 -0500</pubDate>
     </item>
   </channel>
 </rss>
