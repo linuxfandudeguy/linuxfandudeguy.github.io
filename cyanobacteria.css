@@ -182,7 +182,7 @@ header {
   border: 2px ridge var(--border);
   border-radius: 5px;
 
-  background: url('assets/05abfcb6ab1be41f973408e218e878ad.jpg') center / cover;
+  background: url('assets/dithered-image.png') center / cover;
 }
 
 header span {
