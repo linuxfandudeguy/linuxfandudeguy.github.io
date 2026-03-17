@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Tue, 17 Mar 2026 23:32:52 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 23:36:12 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Delete assets/LuckyStar.wsz]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/fb491038be02a92e7c20844d7b93881c42901cfd</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/fb491038be02a92e7c20844d7b93881c42901cfd</guid>
+      <pubDate>Tue, 17 Mar 2026 19:36:04 -0400</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/bc6324a0ebb51d9a41892aa829375d3c3248784d</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/bc6324a0ebb51d9a41892aa829375d3c3248784d</guid>
+      <pubDate>Tue, 17 Mar 2026 23:32:52 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[Update homepage.html]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/b1fe218adc08b690cbe5e327b9a312007733a05c</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/00a16bb2b3cbfce26f3f4c6d22369dace48ca70f</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/00a16bb2b3cbfce26f3f4c6d22369dace48ca70f</guid>
       <pubDate>Tue, 17 Mar 2026 19:17:39 -0400</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/49c155db39d1eac142f6bec98c2e0389dba9f0a9</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/49c155db39d1eac142f6bec98c2e0389dba9f0a9</guid>
-      <pubDate>Tue, 17 Mar 2026 23:17:11 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Rename Lucky Star by M-nebell.wsz to LuckyStar.wsz]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/cbaca7fd9f05c5f217e6b2a17de82b27ac161394</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/cbaca7fd9f05c5f217e6b2a17de82b27ac161394</guid>
-      <pubDate>Tue, 17 Mar 2026 19:17:03 -0400</pubDate>
     </item>
   </channel>
 </rss>
