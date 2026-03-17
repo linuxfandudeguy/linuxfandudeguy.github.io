@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Tue, 17 Mar 2026 23:10:08 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 23:17:11 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Rename Lucky Star by M-nebell.wsz to LuckyStar.wsz]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/cbaca7fd9f05c5f217e6b2a17de82b27ac161394</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/cbaca7fd9f05c5f217e6b2a17de82b27ac161394</guid>
+      <pubDate>Tue, 17 Mar 2026 19:17:03 -0400</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/b27cbc24b1f8d760995bf6d7ab7c0214435b8cf0</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/b27cbc24b1f8d760995bf6d7ab7c0214435b8cf0</guid>
+      <pubDate>Tue, 17 Mar 2026 23:10:08 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[Update readme.md]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/df099b1342386869d894494b40a95cf8b3a4359a</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/d4ca3053992a72241fabbfeb52296ec9bfc19dc4</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/d4ca3053992a72241fabbfeb52296ec9bfc19dc4</guid>
       <pubDate>Mon, 16 Mar 2026 20:15:01 -0400</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/ae79ad20b6e1b84157d98f80d4943c812e492c36</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/ae79ad20b6e1b84157d98f80d4943c812e492c36</guid>
-      <pubDate>Mon, 16 Mar 2026 23:54:23 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Update cyanobacteria.css]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/ac6cdca0248443fcb8ee83aa13e51fd5b074daf8</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/ac6cdca0248443fcb8ee83aa13e51fd5b074daf8</guid>
-      <pubDate>Mon, 16 Mar 2026 19:54:16 -0400</pubDate>
     </item>
   </channel>
 </rss>
