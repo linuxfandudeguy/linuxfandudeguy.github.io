@@ -317,35 +317,24 @@ setInterval(step, 200);
 
 
 <div id="customPlayer">
-  <div id="playPause" class="control-btn">►</div>
-  <div class="song-title">
-    <div class="marquee-inner">大沼ダイスケ - Theme of Sound Lab (feat.初音ミク)
-</div>
-  </div>
-</div>
-
-<audio id="audio" src="/assets%2F%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%BB%E3%83%A9%E3%83%9C%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E%EF%BC%88prototype%EF%BC%89_komono_202601180505.mp3" type="audio/mpeg" style="display:none;"></audio>
-
+<script src="/assets/webamp.bundle.min.js?v={{ site.time | date: '%s' }}"></script>
+<div id="webamp-container"></div>
 <script>
-  // ===== MANUAL PLAY/PAUSE =====
-  const audio = document.getElementById('audio');
-  const playPauseBtn = document.getElementById('playPause');
+    // Initialize Webamp
+    const webamp = new Webamp({
+      initialTracks: [
+        {
+          url: "/assets%2F%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%BB%E3%83%A9%E3%83%9C%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E%EF%BC%88prototype%EF%BC%89_komono_202601180505.mp3",
+          metaData: { title: "大沼ダイスケ - Theme of Sound Lab (feat.初音ミク)" }
+        }
+      ],
+      initialSkin: "/assets/Lucky Star by M-nebell.wsz"
+    });
 
-  playPauseBtn.addEventListener('click', () => {
-    if(audio.paused){
-      audio.play();
-      playPauseBtn.textContent = '♬';
-    } else {
-      audio.pause();
-      playPauseBtn.textContent = '►';
-    }
-  });
-
-  // ===== RESET PLAY BUTTON WHEN SONG ENDS =====
-  audio.addEventListener('ended', () => {
-    playPauseBtn.textContent = '►';
-  });
-</script>
+    // Render Webamp in the container
+    webamp.renderWhenReady(document.getElementById("webamp-container"));
+  </script>
+</div>
 
 
 			<!-- FC2 Counter  Ends here -->
