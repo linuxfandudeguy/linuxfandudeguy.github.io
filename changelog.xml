@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Tue, 17 Mar 2026 23:22:51 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 23:25:50 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[blooob]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/eed6f822513d79ba0fe7617ff8f62b3c557fcf4c</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/eed6f822513d79ba0fe7617ff8f62b3c557fcf4c</guid>
+      <pubDate>Tue, 17 Mar 2026 19:25:41 -0400</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/696e5ccc89fbfc6c95ff133e4f180ffb139830a6</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/696e5ccc89fbfc6c95ff133e4f180ffb139830a6</guid>
+      <pubDate>Tue, 17 Mar 2026 23:22:51 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[Update homepage.html]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/f1d53f28848b6f86f6c5a8dc435831d310b0c160</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/df099b1342386869d894494b40a95cf8b3a4359a</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/df099b1342386869d894494b40a95cf8b3a4359a</guid>
       <pubDate>Tue, 17 Mar 2026 19:09:59 -0400</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/bd6898a4ec98ea519dd49c44e9b16fa33dd698c7</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/bd6898a4ec98ea519dd49c44e9b16fa33dd698c7</guid>
-      <pubDate>Tue, 17 Mar 2026 23:09:16 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[replace ugly audio player with webamp]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/2b336aaaaaa65566b3ed6b911ca9884156448d60</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/2b336aaaaaa65566b3ed6b911ca9884156448d60</guid>
-      <pubDate>Tue, 17 Mar 2026 23:08:36 +0000</pubDate>
     </item>
   </channel>
 </rss>
