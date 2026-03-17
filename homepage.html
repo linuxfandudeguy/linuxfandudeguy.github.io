@@ -320,26 +320,21 @@ setInterval(step, 200);
 <script src="/assets/webamp.bundle.min.js?v={{ site.time | date: '%s' }}"></script>
 <div id="webamp-container"></div>
 <script>
-  fetch("/assets/LuckyStar.wsz")
-    .then(res => res.arrayBuffer())
-    .then(buffer => {
-      const skinBlob = new Blob([buffer], { type: "application/zip" });
+  // Initialize Webamp with a local URL, using an object
+  const webamp = new Webamp({
+    initialTracks: [
+      {
+        url: "/assets%2F%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%BB%E3%83%A9%E3%83%9C%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E%EF%BC%88prototype%EF%BC%89_komono_202601180505.mp3",
+        metaData: { title: "大沼ダイスケ - Theme of Sound Lab (feat.初音ミク)" }
+      }
+    ],
+    // Use an object with url, not a string
+    initialSkin: {
+      url: "/assets/LuckyStar.wsz" // local URL served via HTTP
+    }
+  });
 
-      // Initialize Webamp with the skin Blob
-      const webamp = new Webamp({
-        initialTracks: [
-          {
-            url: "/assets%2F%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%BB%E3%83%A9%E3%83%9C%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E%EF%BC%88prototype%EF%BC%89_komono_202601180505.mp3",
-            metaData: { title: "大沼ダイスケ - Theme of Sound Lab (feat.初音ミク)" }
-          }
-        ],
-        initialSkin: skinBlob
-      });
-
-      // Render Webamp
-      webamp.renderWhenReady(document.getElementById("webamp-container"));
-    })
-    .catch(err => console.error("Failed to load skin:", err));
+  webamp.renderWhenReady(document.getElementById("webamp-container"));
 </script>
 </div>
 
