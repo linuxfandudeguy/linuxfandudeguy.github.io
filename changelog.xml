@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Thu, 19 Mar 2026 18:05:59 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2026 13:31:11 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Update homepage.html]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/efc5a88412c2bac7b91db71a73562695ae71a618</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/efc5a88412c2bac7b91db71a73562695ae71a618</guid>
+      <pubDate>Sat, 21 Mar 2026 09:31:04 -0400</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7a3f380e3cd7f14376c98eafc4e773486e9dc261</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7a3f380e3cd7f14376c98eafc4e773486e9dc261</guid>
+      <pubDate>Thu, 19 Mar 2026 18:05:59 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[Delete assets/Farmcore.mp3]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7a1440bf72cf32ba899a78fcb11bb640dd32c796</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c85cc92d2a032b04d934475e4f3c6e6310fcf920</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c85cc92d2a032b04d934475e4f3c6e6310fcf920</guid>
       <pubDate>Tue, 17 Mar 2026 19:36:33 -0400</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/0ccd806bd73806ca8ab9ccc65683939ea2e60344</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/0ccd806bd73806ca8ab9ccc65683939ea2e60344</guid>
-      <pubDate>Tue, 17 Mar 2026 23:36:13 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Delete assets/LuckyStar.wsz]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/fb491038be02a92e7c20844d7b93881c42901cfd</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/fb491038be02a92e7c20844d7b93881c42901cfd</guid>
-      <pubDate>Tue, 17 Mar 2026 19:36:04 -0400</pubDate>
     </item>
   </channel>
 </rss>
