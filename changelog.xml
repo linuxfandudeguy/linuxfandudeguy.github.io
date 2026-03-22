@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Sat, 21 Mar 2026 13:31:11 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2026 15:39:52 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Update homepage.html]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c27dfe497980e24fd88dfbc49cef1fb2fb594339</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c27dfe497980e24fd88dfbc49cef1fb2fb594339</guid>
+      <pubDate>Sun, 22 Mar 2026 11:39:44 -0400</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/1ec3eb772e242c5fb0895f0c78d90de3e5623674</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/1ec3eb772e242c5fb0895f0c78d90de3e5623674</guid>
+      <pubDate>Sat, 21 Mar 2026 13:31:11 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[Update homepage.html]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/efc5a88412c2bac7b91db71a73562695ae71a618</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/9f515fb3e978f271542e885056ac4d45540cbb1d</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/9f515fb3e978f271542e885056ac4d45540cbb1d</guid>
       <pubDate>Tue, 17 Mar 2026 19:37:36 -0400</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/ca39570b559e45eca4cf5ddb283c4f8801061d98</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/ca39570b559e45eca4cf5ddb283c4f8801061d98</guid>
-      <pubDate>Tue, 17 Mar 2026 23:36:42 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Add files via upload]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c85cc92d2a032b04d934475e4f3c6e6310fcf920</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c85cc92d2a032b04d934475e4f3c6e6310fcf920</guid>
-      <pubDate>Tue, 17 Mar 2026 19:36:33 -0400</pubDate>
     </item>
   </channel>
 </rss>
