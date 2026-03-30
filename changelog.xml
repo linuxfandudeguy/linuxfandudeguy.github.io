@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Sun, 29 Mar 2026 16:22:24 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2026 20:34:51 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Update homepage.html]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/eeffb7801e8993bac2e6dc5cb96ebb3a0df0e499</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/eeffb7801e8993bac2e6dc5cb96ebb3a0df0e499</guid>
+      <pubDate>Mon, 30 Mar 2026 16:34:41 -0400</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/5c3fdd78a8d8967db792466f265dbeebf023712e</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/5c3fdd78a8d8967db792466f265dbeebf023712e</guid>
+      <pubDate>Sun, 29 Mar 2026 16:22:24 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[Update homepage.html]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7d552795db9fd46af0f3eab73a9a8b2d2f165fe4</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/efc5a88412c2bac7b91db71a73562695ae71a618</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/efc5a88412c2bac7b91db71a73562695ae71a618</guid>
       <pubDate>Sat, 21 Mar 2026 09:31:04 -0400</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7a3f380e3cd7f14376c98eafc4e773486e9dc261</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7a3f380e3cd7f14376c98eafc4e773486e9dc261</guid>
-      <pubDate>Thu, 19 Mar 2026 18:05:59 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Delete assets/Farmcore.mp3]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7a1440bf72cf32ba899a78fcb11bb640dd32c796</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/7a1440bf72cf32ba899a78fcb11bb640dd32c796</guid>
-      <pubDate>Thu, 19 Mar 2026 14:05:50 -0400</pubDate>
     </item>
   </channel>
 </rss>
