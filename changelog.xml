@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Mon, 13 Apr 2026 00:36:31 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 00:40:19 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Delete assets/tumblr_a8e75989fb17d180a080d6821b832853_2328830c_75.webp]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/61da3235d785e642bd58973a8be8e206b9f5d3de</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/61da3235d785e642bd58973a8be8e206b9f5d3de</guid>
+      <pubDate>Sun, 12 Apr 2026 20:40:09 -0400</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/97abdfa2ed2e4ae1882443296598972d1581faf5</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/97abdfa2ed2e4ae1882443296598972d1581faf5</guid>
+      <pubDate>Mon, 13 Apr 2026 00:36:31 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[Add files via upload]]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/776e33f1e33d5d0e1e0c849bd6e16be62c159f95</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c1005d20e6c69d3ff75978b08891ddc61a04a020</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c1005d20e6c69d3ff75978b08891ddc61a04a020</guid>
       <pubDate>Fri, 10 Apr 2026 18:29:52 -0400</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/81042e4448b1ae0da8b4e88fdb294de11d385ee9</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/81042e4448b1ae0da8b4e88fdb294de11d385ee9</guid>
-      <pubDate>Wed, 8 Apr 2026 00:25:39 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Update homepage.html]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/510e76997537d6489dbc27f7f170f4112117c75e</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/510e76997537d6489dbc27f7f170f4112117c75e</guid>
-      <pubDate>Tue, 7 Apr 2026 20:25:31 -0400</pubDate>
     </item>
   </channel>
 </rss>
