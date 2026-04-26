@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Sat, 25 Apr 2026 13:47:16 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 13:12:06 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Update print statement from 'Hello' to 'Goodbye']]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/86861697cd7369e47e0e0826f75aa97d1ee3c7dd</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/86861697cd7369e47e0e0826f75aa97d1ee3c7dd</guid>
+      <pubDate>Sun, 26 Apr 2026 09:11:57 -0400</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/34fc54d31ee8177a79ebc519871a55897b85eb0e</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/34fc54d31ee8177a79ebc519871a55897b85eb0e</guid>
+      <pubDate>Sat, 25 Apr 2026 13:47:16 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[Update print statement from 'Hello' to 'Goodbye']]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/01a9195e468b094af65eb79d79fe1ca1830b3204</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/9cc023675b9a09222529a38b63e6f9c838fc61fc</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/9cc023675b9a09222529a38b63e6f9c838fc61fc</guid>
       <pubDate>Wed, 15 Apr 2026 17:44:36 -0400</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/213b0497a3b60fb0430ce577fc2a3818df12af86</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/213b0497a3b60fb0430ce577fc2a3818df12af86</guid>
-      <pubDate>Mon, 13 Apr 2026 00:40:19 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Delete assets/tumblr_a8e75989fb17d180a080d6821b832853_2328830c_75.webp]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/61da3235d785e642bd58973a8be8e206b9f5d3de</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/61da3235d785e642bd58973a8be8e206b9f5d3de</guid>
-      <pubDate>Sun, 12 Apr 2026 20:40:09 -0400</pubDate>
     </item>
   </channel>
 </rss>
