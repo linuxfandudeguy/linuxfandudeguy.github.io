@@ -4,7 +4,19 @@
     <title>changelog</title>
     <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io</link>
     <description>Recent commits</description>
-    <lastBuildDate>Sun, 26 Apr 2026 13:12:06 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 12:03:56 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Update homepage.html]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/886da45cb74de90061eef7df404bb819b0a3ecd2</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/886da45cb74de90061eef7df404bb819b0a3ecd2</guid>
+      <pubDate>Wed, 27 May 2026 08:02:15 -0400</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[update changelog]]></title>
+      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/69173aa6a1ea736e47cd4fabe9e0d8ddeb8a00ce</link>
+      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/69173aa6a1ea736e47cd4fabe9e0d8ddeb8a00ce</guid>
+      <pubDate>Sun, 26 Apr 2026 13:12:06 +0000</pubDate>
+    </item>
     <item>
       <title><![CDATA[Update print statement from 'Hello' to 'Goodbye']]></title>
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/86861697cd7369e47e0e0826f75aa97d1ee3c7dd</link>
@@ -46,18 +58,6 @@
       <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/06423d383dede548efaee19074ccfedcf0a3ee1f</link>
       <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/06423d383dede548efaee19074ccfedcf0a3ee1f</guid>
       <pubDate>Wed, 15 Apr 2026 17:47:04 -0400</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[update changelog]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c8b07cd3967224dff78acf323b05b0b55c20612b</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/c8b07cd3967224dff78acf323b05b0b55c20612b</guid>
-      <pubDate>Wed, 15 Apr 2026 21:44:44 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Create graphics.html]]></title>
-      <link>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/9cc023675b9a09222529a38b63e6f9c838fc61fc</link>
-      <guid>https://github.com/linuxfandudeguy/linuxfandudeguy.github.io/commit/9cc023675b9a09222529a38b63e6f9c838fc61fc</guid>
-      <pubDate>Wed, 15 Apr 2026 17:44:36 -0400</pubDate>
     </item>
   </channel>
 </rss>
